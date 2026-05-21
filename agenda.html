@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono de la pestaña -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Tipografía: Google Fonts (Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Hojas de estilo (CSS) -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--Nombre de la página que aparece en la pestaña del navegador-->
+    <title>Mi Agenda Personal | Indie Events Radar</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo Indie Events Radar">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="agenda.html" class="active">Mi Agenda</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="agenda-seccion">
+            <h2>Mis Eventos Guardados</h2>
+
+            <div id="contenedor-cards-agenda"></div>
+
+            <div id="mensaje-agenda-vacia" class="oculto">
+                <p>No tenés eventos agendados en este momento. ¡Explorá la cartelera!</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/tunumerodecelular" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+
+    <footer>
+        <p>&copy; 2026 - Indie Events Radar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/data/eventos.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/agenda.js"></script>
+</body>
+
+</html>
