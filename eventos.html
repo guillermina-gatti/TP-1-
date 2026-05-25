@@ -33,10 +33,16 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <aside class="filtros-seccion">
             <h2>Filtros</h2>
+            <label for="filtro-fecha">Filtrar por fecha:</label>
+            <input type="date" id="filtro-fecha">
+
+            <label for="filtro-precio">Precio máximo ($):</label>
+            <input type="number" id="filtro-precio" min="0" placeholder="Ej: 50000">
+
+            <button id="btn-limpiar-filtro">Limpiar filtros</button>
         </aside>
 
         <section class="grilla-eventos-seccion">
@@ -54,7 +60,7 @@
         <p>&copy; 2026 - Indie Events Radar. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="assets/data/eventos.js"></script>
+    <script src="assets/data/data.js"></script>
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/eventos.js"></script>
 </body>
