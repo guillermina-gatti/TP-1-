@@ -348,45 +348,172 @@ function renderCards(lista) {
     return;
   }
 
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
+
   lista.forEach(card => {
-    const cardElement = document.createElement("div");
+    // Se utiliza <article> en lugar de <div> porque representa contenido independiente e integrador (una tarjeta).
+    const cardElement = document.createElement("article");
+    cardElement.classList.add("card-evento");
+
+    // Determinar estado según fecha
+    const fechaEvento = new Date(card.date + "T00:00:00");
+    const yaTermino = fechaEvento < hoy;
+    const estadoTexto = yaTermino ? "Terminado" : "Próximamente";
+    const estadoClase = yaTermino ? "badge-terminado" : "badge-proximamente";
+
+    // Formatear fecha para mostrar
+    const opcionesFecha = { day: 'numeric', month: 'long', year: 'numeric' };
+    const fechaFormateada = fechaEvento.toLocaleDateString('es-AR', opcionesFecha);
 
     cardElement.innerHTML = `
-      <img src="/assets/img/expodent.jpg" alt="${card.title}" />
-      <h2>${card.title}</h2>
-      <p>${card.category}</p>
-      <p>${card.date} - ${card.time}</p>
-      <p>${card.location}</p>
-      <p>Precio: ${card.price}</p>
-      <p>Disponibilidad: ${card.availability}</p>
+      <!-- Cabecera de la tarjeta con etiquetas descriptivas -->
+      <header class="card-header">
+        <span class="badge badge-categoria">${card.category}</span>
+        <span class="badge ${estadoClase}">${estadoTexto}</span>
+      </header>
 
-      <button id="btn-ver-mas-${card.id}" onclick="toggleDetalle(${card.id})">Ver más</button>
+      <!-- Cuerpo principal de la tarjeta con el título y la descripción -->
+      <section class="card-body">
+        <h2 class="card-titulo">${card.title}</h2>
+        <p class="card-descripcion">${card.context}</p>
+      </section>
 
-      <div id="detalle-${card.id}" style="display: none;">
-        <p><strong>Organizador:</strong> <a href="${card.organizer}" target="_blank">${card.organizer}</a></p>
-        <p><strong>Registro:</strong> <a href="${card.registration}" target="_blank">${card.registration}</a></p>
-        <p><strong>Descripción:</strong> ${card.context}</p>
-      </div>
+      <!-- Sección con los detalles específicos (fecha, hora, lugar) -->
+      <section class="card-specs">
+        <div class="card-spec-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E0E1DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>${fechaFormateada}</span>
+        </div>
+        <div class="card-spec-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E0E1DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>${card.time}</span>
+        </div>
+        <div class="card-spec-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E0E1DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>${card.location}</span>
+        </div>
+      </section>
+
+      <!-- Pie de la tarjeta con el precio y la acción principal -->
+      <footer class="card-footer">
+        <span class="card-precio">${card.price}</span>
+        <button class="card-btn-agregar" onclick="event.stopPropagation(); agregarAgenda(${card.id})">Añadir +</button>
+      </footer>
     `;
+
+    // Al hacer clic en la card se abre el modal
+    cardElement.addEventListener("click", function () {
+      abrirModal(card.id);
+    });
 
     contenedor.appendChild(cardElement);
   });
 }
 
 // -----------------------------------------------
-// Función que muestra u oculta el detalle de una card
+// MODAL — Abrir con los datos del evento
 // -----------------------------------------------
-function toggleDetalle(id) {
-  const detalle = document.querySelector("#detalle-" + id);
-  const boton = document.querySelector("#btn-ver-mas-" + id);
+function abrirModal(id) {
+  const card = cards.find(c => c.id === id);
+  if (!card) return;
 
-  if (detalle.style.display === "none") {
-    detalle.style.display = "block";
-    boton.textContent = "Ver menos";
-  } else {
-    detalle.style.display = "none";
-    boton.textContent = "Ver más";
+  const modal = document.querySelector("#modal-detalle-evento");
+
+  modal.innerHTML = `
+    <!-- Capa oscura semitransparente que cubre la página -->
+    <div class="modal-overlay" onclick="cerrarModal()">
+      <!-- Contenedor principal de la información, usamos article por ser contenido autónomo -->
+      <article class="modal-contenido" onclick="event.stopPropagation()">
+
+        <!-- Cabecera del modal con el título y el botón de cerrar -->
+        <header class="modal-header">
+          <h2>${card.title}</h2>
+          <button class="modal-btn-cerrar" onclick="cerrarModal()">✕</button>
+        </header>
+
+        <!-- Descripción detallada del evento -->
+        <p class="modal-descripcion">${card.context}</p>
+
+        <!-- Sección de cuadrícula para los datos específicos -->
+        <section class="modal-grid">
+          <div class="modal-campo">
+            <span>Categoría</span>
+            <p>${card.category}</p>
+          </div>
+          <div class="modal-campo">
+            <span>Precio</span>
+            <p>${card.price}</p>
+          </div>
+          <div class="modal-campo">
+            <span>Fecha</span>
+            <p>${card.date}</p>
+          </div>
+          <div class="modal-campo">
+            <span>Horario</span>
+            <p>${card.time}</p>
+          </div>
+          <div class="modal-campo">
+            <span>Lugar</span>
+            <p>${card.location}</p>
+          </div>
+          <div class="modal-campo">
+            <span>Organizador</span>
+            <p><a href="${card.organizer}" target="_blank">${card.organizer}</a></p>
+          </div>
+          <div class="modal-campo">
+            <span>Registro</span>
+            <p><a href="${card.registration}" target="_blank">${card.registration}</a></p>
+          </div>
+        </section>
+
+        <!-- Pie del modal con los botones de acción final -->
+        <footer class="modal-botones">
+          <a href="${card.registration}" target="_blank" class="modal-btn-registrar">Registrarse</a>
+          <button class="modal-btn-cerrar-pie" onclick="cerrarModal()">Cerrar</button>
+        </footer>
+
+      </article>
+    </div>
+  `;
+
+  modal.classList.remove("modal-oculto");
+  document.body.classList.add("modal-abierto");
+}
+
+// -----------------------------------------------
+// MODAL — Cerrar
+// -----------------------------------------------
+function cerrarModal() {
+  const modal = document.querySelector("#modal-detalle-evento");
+  modal.classList.add("modal-oculto");
+  document.body.classList.remove("modal-abierto");
+}
+
+// -----------------------------------------------
+// AGENDA — Guardar evento en localStorage
+// -----------------------------------------------
+function agregarAgenda(id) {
+  let agenda = JSON.parse(localStorage.getItem("agenda")) || [];
+
+  // Evitar duplicados
+  if (agenda.includes(id)) {
+    alert("Este evento ya está en tu agenda.");
+    return;
   }
+
+  agenda.push(id);
+  localStorage.setItem("agenda", JSON.stringify(agenda));
+
+  // Feedback visual: cambiar texto del botón brevemente
+  const btn = event.target;
+  const textoOriginal = btn.textContent;
+  btn.textContent = "✓ Añadido";
+  btn.disabled = true;
+  setTimeout(function () {
+    btn.textContent = textoOriginal;
+    btn.disabled = false;
+  }, 1500);
 }
 
 // -----------------------------------------------

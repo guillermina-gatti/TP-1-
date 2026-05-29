@@ -102,7 +102,7 @@ git push origin dev
 
 ## 👥 Integrantes
 
-- Alumno 1: [Nombre]
+- Alumno 1: [Brandon Velasquez]
 - Alumno 2: [Nombre]
 - Alumno 3: [Nombre]
 
