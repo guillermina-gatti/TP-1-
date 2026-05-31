@@ -114,3 +114,10 @@ El flujo de trabajo fue: desarrollar en `feature-developer` → probar → Pull 
 ## 📌 Proyecto
 **Idea 7: Indie Events Radar**
 Nicho: Cultura, eventos y comunidad.
+
+---
+
+## 🤖 Uso de IA
+Se utilizaron herramientas de inteligencia artificial como apoyo durante el desarrollo. El detalle completo se encuentra en [`informe-ia.md`](./informe-ia.md).
+
+---
