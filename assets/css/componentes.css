@@ -67,7 +67,6 @@ body>header nav ul li a.active {
 /* ---------- Main layout ---------- */
 main {
   flex: 1;
-  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 40px 24px 60px;
@@ -87,80 +86,81 @@ main {
 
 /* ---------- ASIDE — Barra de filtros ---------- */
 .filtros-seccion {
-  background-color: #EDE8DF;
-  border: 1px solid #D9D3C8;
+  background-color: rgb(27 38 75 / 42%);
+  border: none;
   border-radius: 14px;
   padding: 20px 28px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
 }
 
-.filtros-seccion h2 {
-  width: 100%;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #9C9790;
-  margin-bottom: 4px;
+.filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-/* Cada grupo label + control */
 .filtros-seccion label {
-  display: block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #9C9790;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7A8B99;
+  /* Azul claro grisáceo sutil */
   margin-bottom: 6px;
 }
 
-.filtros-seccion input[type="date"],
-.filtros-seccion input[type="number"] {
+.filtros-seccion input,
+.filtros-seccion select {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   color: #403E39;
-  background-color: #F3EFE7;
+  background-color: #FFFFFF;
   border: 1px solid #C8C2B8;
   border-radius: 8px;
-  padding: 9px 14px;
+  /* Esquinas redondeadas */
+  padding: 10px 14px;
   outline: none;
+  width: 100%;
   transition: border-color 0.2s, box-shadow 0.2s;
-  width: 200px;
 }
 
-.filtros-seccion input[type="date"]:focus,
-.filtros-seccion input[type="number"]:focus {
-  border-color: #403E39;
-  box-shadow: 0 0 0 3px rgba(64, 62, 57, 0.1);
+.filtros-seccion select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  padding-right: 36px;
+  color: #B0B3B8;
+  /* Color inicial del placeholder simulado */
 }
 
-.filtros-seccion input[type="number"]::placeholder {
-  color: #B0AB9F;
-}
-
-/* Botón limpiar */
-#btn-limpiar-filtro {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+.filtros-seccion select:not(:invalid) {
   color: #403E39;
-  background-color: transparent;
-  border: 1.5px solid #C8C2B8;
-  border-radius: 8px;
-  padding: 9px 20px;
-  cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
-  align-self: flex-end;
 }
 
-#btn-limpiar-filtro:hover {
-  background-color: #D9D3C8;
-  border-color: #A09A90;
+.filtros-seccion input:focus,
+.filtros-seccion select:focus {
+  border-color: #7A8B99;
+  box-shadow: 0 0 0 3px rgba(122, 139, 153, 0.15);
+}
+
+.filtros-seccion input::placeholder {
+  color: #B0B3B8;
+  /* Gris clara */
+  font-family: sans-serif;
+}
+
+.filtros-seccion input[type="date"] {
+  position: relative;
+}
+
+/* Icono oscuro de calendario */
+.filtros-seccion input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  filter: invert(0.4);
 }
 
 /* ---------- GRILLA DE CARDS ---------- */
@@ -191,6 +191,8 @@ main {
   cursor: pointer;
   transition: box-shadow 0.25s, transform 0.25s;
   font-family: 'Montserrat', sans-serif;
+  height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 .card-evento:hover {
@@ -235,6 +237,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
+  overflow: hidden;
 }
 
 .card-titulo {
@@ -252,6 +256,10 @@ main {
   font-weight: 400;
   color: #E0E1DD;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* --- 3. Specs: iconos + datos --- */

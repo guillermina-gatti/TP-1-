@@ -60,14 +60,38 @@
     <main>
         <!-- Panel lateral para los filtros de búsqueda -->
         <aside class="filtros-seccion">
-            <h2>Filtros</h2>
-            <label for="filtro-fecha">Filtrar por fecha:</label>
-            <input type="date" id="filtro-fecha">
-
-            <label for="filtro-precio">Precio máximo ($):</label>
-            <input type="number" id="filtro-precio" min="0" placeholder="Ej: 50000">
-
-            <button id="btn-limpiar-filtro">Limpiar filtros</button>
+            <div class="filtro-grupo">
+                <label for="filtro-buscar">Buscar</label>
+                <input type="text" id="filtro-buscar" placeholder="Nombre del evento...">
+            </div>
+            <div class="filtro-grupo">
+                <label for="filtro-fecha">Fecha</label>
+                <input type="date" id="filtro-fecha" placeholder="dd/mm/aaaa">
+            </div>
+            <div class="filtro-grupo">
+                <label for="filtro-categoria">Categoría</label>
+                <select id="filtro-categoria">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                </select>
+            </div>
+            <div class="filtro-grupo">
+                <label for="filtro-precio">Precio</label>
+                <select id="filtro-precio">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="Todos">Todos</option>
+                    <option value="Gratuito">Gratuito</option>
+                    <option value="Pago">Pago</option>
+                </select>
+            </div>
+            <div class="filtro-grupo">
+                <label for="filtro-estado">Estado</label>
+                <select id="filtro-estado">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="Hoy">Hoy</option>
+                    <option value="Proximamente">Proximamente</option>
+                    <option value="Finalizado">Finalizado</option>
+                </select>
+            </div>
         </aside>
 
         <!-- Sección principal donde se muestra la cuadrícula de eventos -->

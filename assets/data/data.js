@@ -2,7 +2,7 @@ const cards = [
   {
     id: 1,
     title: "ExpoDent 2026",
-    category: "🏢 Ferias y Congresos",
+    category: ["🏢 Expo", "Congresos", "Ferias"],
     date: "2026-05-23",
     time: "10:00",
     location: "Pabellón Verde, La Rural (Av. Sarmiento 2704, CABA)",
@@ -15,7 +15,7 @@ const cards = [
   {
     id: 2,
     title: "Expo Veterinarias (Día 1)",
-    category: "🏢 Ferias y Congresos",
+    category: ["🏢 Expo", "Congresos", "Ferias"],
     date: "2026-05-30",
     time: "12:00",
     location: "Pabellón Ocre, La Rural (Av. Sarmiento 2704, CABA)",
@@ -28,7 +28,7 @@ const cards = [
   {
     id: 3,
     title: "Expo Veterinarias (Día 2)",
-    category: "🏢 Ferias y Congresos",
+    category: ["🏢 Expo", "Congresos", "Ferias"],
     date: "2026-05-31",
     time: "12:00",
     location: "Pabellón Ocre, La Rural (Av. Sarmiento 2704, CABA)",
@@ -41,7 +41,7 @@ const cards = [
   {
     id: 4,
     title: "De Händel a Strauss (Ciclo Clásica Joven)",
-    category: "🎻 Cultura, Música Clásica y Ópera",
+    category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-27",
     time: "Dato no disponible",
     location: "Salón Dorado, Teatro Colón (Cerrito 628, CABA)",
@@ -54,7 +54,7 @@ const cards = [
   {
     id: 5,
     title: "Música Antigua - Legados",
-    category: "🎻 Cultura, Música Clásica y Ópera",
+    category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-28",
     time: "Dato no disponible",
     location: "Teatro Colón (Cerrito 628, CABA)",
@@ -67,7 +67,7 @@ const cards = [
   {
     id: 6,
     title: "Réquiem de Mozart",
-    category: "🎻 Cultura, Música Clásica y Ópera",
+    category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-30",
     time: "Dato no disponible",
     location: "Teatro Colón (Cerrito 628, CABA)",
@@ -80,7 +80,7 @@ const cards = [
   {
     id: 7,
     title: "Ópera: Dementia (Estreno Mundial)",
-    category: "🎻 Cultura, Música Clásica y Ópera",
+    category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-31",
     time: "Dato no disponible",
     location: "Teatro Colón (Cerrito 628, CABA)",
@@ -93,7 +93,7 @@ const cards = [
   {
     id: 8,
     title: "Ricardo Arjona",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
     time: "Dato no disponible",
     location: "Movistar Arena (Humboldt 450, CABA)",
@@ -106,7 +106,7 @@ const cards = [
   {
     id: 9,
     title: "La Beriso",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
     time: "Dato no disponible",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
@@ -119,7 +119,7 @@ const cards = [
   {
     id: 10,
     title: "Airbag",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
     time: "Dato no disponible",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
@@ -132,7 +132,7 @@ const cards = [
   {
     id: 11,
     title: "Airbag",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-24",
     time: "Dato no disponible",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
@@ -145,7 +145,7 @@ const cards = [
   {
     id: 12,
     title: "La Beriso",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-24",
     time: "Dato no disponible",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
@@ -158,7 +158,7 @@ const cards = [
   {
     id: 13,
     title: "Andrés Calamaro",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-26",
     time: "Dato no disponible",
     location: "Movistar Arena (Humboldt 450, CABA)",
@@ -171,7 +171,7 @@ const cards = [
   {
     id: 14,
     title: "Drowning Pool",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-26",
     time: "Dato no disponible",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
@@ -184,7 +184,7 @@ const cards = [
   {
     id: 15,
     title: "El Cuarteto de Nos",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-28",
     time: "21:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
@@ -197,7 +197,7 @@ const cards = [
   {
     id: 16,
     title: "Flor Paz",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-28",
     time: "Dato no disponible",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
@@ -210,7 +210,7 @@ const cards = [
   {
     id: 17,
     title: "Los Angeles Azules",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-29",
     time: "Dato no disponible",
     location: "Movistar Arena (Humboldt 450, CABA)",
@@ -223,7 +223,7 @@ const cards = [
   {
     id: 18,
     title: "Natalia Lafourcade (Cancionera Tour)",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-29",
     time: "Dato no disponible",
     location: "Teatro Gran Rex (Av. Corrientes 857, CABA)",
@@ -236,7 +236,7 @@ const cards = [
   {
     id: 19,
     title: "Pomme",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
     time: "Dato no disponible",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
@@ -249,7 +249,7 @@ const cards = [
   {
     id: 20,
     title: "Airbag",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
     time: "Dato no disponible",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
@@ -262,7 +262,7 @@ const cards = [
   {
     id: 21,
     title: "Julia Zenko",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
     time: "Dato no disponible",
     location: "Café Berlin (Av. San Martín 6656, CABA)",
@@ -275,7 +275,7 @@ const cards = [
   {
     id: 22,
     title: "Airbag",
-    category: "🎵 Música y Recitales",
+    category: ["🎵 Música", "Recitales"],
     date: "2026-05-31",
     time: "Dato no disponible",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
@@ -308,25 +308,93 @@ function parsearPrecio(precioStr) {
 }
 
 // -----------------------------------------------
-// Función principal: aplica fecha + precio juntos
+// Función para cargar dinámicamente las categorías
+// -----------------------------------------------
+function cargarCategorias() {
+  const selectCategoria = document.querySelector("#filtro-categoria");
+  if (!selectCategoria) return;
+
+  const categoriasSet = new Set();
+  cards.forEach(card => {
+    if (Array.isArray(card.category)) {
+      card.category.forEach(cat => categoriasSet.add(cat));
+    } else if (card.category) {
+      categoriasSet.add(card.category);
+    }
+  });
+
+  const categoriasUnicas = Array.from(categoriasSet).sort();
+
+  const optionTodas = document.createElement("option");
+  optionTodas.value = "Todas";
+  optionTodas.textContent = "Todas";
+  selectCategoria.appendChild(optionTodas);
+
+  categoriasUnicas.forEach(cat => {
+    const option = document.createElement("option");
+    option.value = cat;
+    option.textContent = cat;
+    selectCategoria.appendChild(option);
+  });
+}
+
+// -----------------------------------------------
+// Función principal: aplica fecha + precio + categoría
 // -----------------------------------------------
 function aplicarFiltros() {
-  const fecha = document.querySelector("#filtro-fecha").value;
-  const precioMaximo = document.querySelector("#filtro-precio").value;
+  const busqueda = document.querySelector("#filtro-buscar")?.value.toLowerCase().trim();
+  const fecha = document.querySelector("#filtro-fecha")?.value;
+  const precioOpcion = document.querySelector("#filtro-precio")?.value;
+  const categoriaOpcion = document.querySelector("#filtro-categoria")?.value;
+  const estadoOpcion = document.querySelector("#filtro-estado")?.value;
 
-  // 1) Filtrar por fecha (si hay fecha seleccionada)
-  let resultado = fecha
-    ? cards.filter(card => card.date === fecha)
-    : [...cards];
+  let resultado = [...cards];
 
-  // 2) Filtrar por precio máximo (si el usuario ingresó un valor)
-  if (precioMaximo !== "") {
-    const limite = parseFloat(precioMaximo);
+  // 1) Filtrar por búsqueda (título)
+  if (busqueda) {
+    resultado = resultado.filter(card => card.title && card.title.toLowerCase().includes(busqueda));
+  }
+
+  // 2) Filtrar por fecha (si hay fecha seleccionada)
+  if (fecha) {
+    resultado = resultado.filter(card => card.date === fecha);
+  }
+
+  // 3) Filtrar por precio ("Gratuito" o "Pago")
+  if (precioOpcion === "Gratuito") {
+    resultado = resultado.filter(card => card.price && card.price.toLowerCase().includes("gratuito"));
+  } else if (precioOpcion === "Pago") {
     resultado = resultado.filter(card => {
-      const precio = parsearPrecio(card.price);
-      // Si el evento no tiene precio informado, lo excluimos
-      if (precio === null) return false;
-      return precio <= limite;
+      const precioNum = parsearPrecio(card.price);
+      return precioNum !== null && !isNaN(precioNum);
+    });
+  }
+
+  // 4) Filtrar por categoría
+  if (categoriaOpcion && categoriaOpcion !== "Todas" && categoriaOpcion !== "") {
+    resultado = resultado.filter(card => {
+      if (Array.isArray(card.category)) {
+        return card.category.includes(categoriaOpcion);
+      }
+      return card.category === categoriaOpcion;
+    });
+  }
+
+  // 5) Filtrar por estado (Hoy / Proximamente / Finalizado)
+  if (estadoOpcion && estadoOpcion !== "") {
+    const hoyFiltro = new Date();
+    hoyFiltro.setHours(0, 0, 0, 0);
+
+    resultado = resultado.filter(card => {
+      const fechaEvento = new Date(card.date + "T00:00:00");
+      if (estadoOpcion === "Hoy") {
+        return fechaEvento.getTime() === hoyFiltro.getTime();
+      } else if (estadoOpcion === "Proximamente") {
+        return fechaEvento > hoyFiltro;
+      } else if (estadoOpcion === "Finalizado") {
+        return fechaEvento < hoyFiltro;
+      }
+      return true;
     });
   }
 
@@ -351,7 +419,19 @@ function renderCards(lista) {
   const hoy = new Date();
   hoy.setHours(0, 0, 0, 0);
 
-  lista.forEach(card => {
+  // Ordenar: primero "Próximamente", luego "Terminado"
+  const listaOrdenada = [...lista].sort((a, b) => {
+    const fechaA = new Date(a.date + "T00:00:00");
+    const fechaB = new Date(b.date + "T00:00:00");
+    const terminoA = fechaA < hoy ? 1 : 0;
+    const terminoB = fechaB < hoy ? 1 : 0;
+    // Si uno terminó y el otro no, el que terminó va después
+    if (terminoA !== terminoB) return terminoA - terminoB;
+    // Dentro del mismo grupo, ordenar por fecha ascendente
+    return fechaA - fechaB;
+  });
+
+  listaOrdenada.forEach(card => {
     // Se utiliza <article> en lugar de <div> porque representa contenido independiente e integrador (una tarjeta).
     const cardElement = document.createElement("article");
     cardElement.classList.add("card-evento");
@@ -369,7 +449,7 @@ function renderCards(lista) {
     cardElement.innerHTML = `
       <!-- Cabecera de la tarjeta con etiquetas descriptivas -->
       <header class="card-header">
-        <span class="badge badge-categoria">${card.category}</span>
+        <span class="badge badge-categoria">${Array.isArray(card.category) ? (card.category.includes("🏢 Expo") ? "🏢 Expo" : card.category[0]) : card.category}</span>
         <span class="badge ${estadoClase}">${estadoTexto}</span>
       </header>
 
@@ -439,7 +519,7 @@ function abrirModal(id) {
         <section class="modal-grid">
           <div class="modal-campo">
             <span>Categoría</span>
-            <p>${card.category}</p>
+            <p>${Array.isArray(card.category) ? card.category.join(", ") : card.category}</p>
           </div>
           <div class="modal-campo">
             <span>Precio</span>
@@ -519,21 +599,33 @@ function agregarAgenda(id) {
 // -----------------------------------------------
 // Inicialización
 // -----------------------------------------------
+// Cargar el dropdown de categorías dinámicamente
+cargarCategorias();
+
+const inputBuscar = document.querySelector("#filtro-buscar");
 const inputFecha = document.querySelector("#filtro-fecha");
 const selectPrecio = document.querySelector("#filtro-precio");
+const selectCategoria = document.querySelector("#filtro-categoria");
+const selectEstado = document.querySelector("#filtro-estado");
 const btnLimpiar = document.querySelector("#btn-limpiar-filtro");
 
-// Ambos controles llaman a la misma función central
-inputFecha.addEventListener("change", aplicarFiltros);
-// "input" reacciona en tiempo real mientras el usuario escribe
-selectPrecio.addEventListener("input", aplicarFiltros);
+// Controles llaman a la misma función central
+if (inputBuscar) inputBuscar.addEventListener("input", aplicarFiltros);
+if (inputFecha) inputFecha.addEventListener("change", aplicarFiltros);
+if (selectPrecio) selectPrecio.addEventListener("change", aplicarFiltros);
+if (selectCategoria) selectCategoria.addEventListener("change", aplicarFiltros);
+if (selectEstado) selectEstado.addEventListener("change", aplicarFiltros);
 
-// Limpiar ambos filtros y mostrar todas las cards
-btnLimpiar.addEventListener("click", function () {
-  inputFecha.value = "";
-  selectPrecio.value = "";
-  renderCards(cards);
-});
+if (btnLimpiar) {
+  btnLimpiar.addEventListener("click", function () {
+    if (inputBuscar) inputBuscar.value = "";
+    if (inputFecha) inputFecha.value = "";
+    if (selectPrecio) selectPrecio.value = "";
+    if (selectCategoria) selectCategoria.value = "";
+    if (selectEstado) selectEstado.value = "";
+    renderCards(cards);
+  });
+}
 
 // Mostrar todas las cards al cargar
 renderCards(cards);
