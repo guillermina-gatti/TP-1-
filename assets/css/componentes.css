@@ -166,8 +166,9 @@ main {
 /* ---------- GRILLA DE CARDS ---------- */
 #contenedor-cards-eventos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, 320px);
   gap: 24px;
+  justify-content: center;
 }
 
 /* Mensaje sin resultados */
@@ -191,8 +192,10 @@ main {
   cursor: pointer;
   transition: box-shadow 0.25s, transform 0.25s;
   font-family: 'Montserrat', sans-serif;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  width: 320px;
+  height: 420px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .card-evento:hover {
