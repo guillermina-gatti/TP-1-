@@ -1,4 +1,3 @@
-00
 <!DOCTYPE html>
 <html lang="es">
 
@@ -10,12 +9,12 @@
     <!-- Tipografía: Google Fonts (Montserrat) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Inria+Serif:wght@300;400;700&family=Montserrat:wght@300;400;600;700" rel="stylesheet">
     <!-- Hojas de estilo (CSS) -->
     <link rel="stylesheet" href="../css/componentes.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/agenda.css">
     <!--Nombre de la página que aparece en la pestaña del navegador-->
     <title>Mi Agenda Personal | Indie Events Radar</title>
 </head>
@@ -60,15 +59,22 @@
     <main>
         <!-- Sección de los eventos guardados por el usuario -->
         <section class="agenda-seccion">
-            <h2>Mis Eventos Guardados</h2>
-
-            <!-- Contenedor dinámico donde Javascript inyectará los eventos guardados en LocalStorage -->
-            <div id="contenedor-cards-agenda"></div>
-
-            <!-- Mensaje que se muestra si la agenda está vacía -->
-            <div id="mensaje-agenda-vacia" class="oculto">
-                <p>No tenés eventos agendados en este momento. ¡Explorá la cartelera!</p>
+            <div class="agenda-header">
+                <h1 class="agenda-title">Mi agenda</h1>
+                <p class="agenda-subtitle">Tus eventos guardados, organizados por estado.</p>
             </div>
+
+            <div class="filter-buttons">
+                <button class="btn-filter" data-filter="finalizado">Finalizado</button>
+                <button class="btn-filter" data-filter="hoy">Hoy</button>
+                <button class="btn-filter active" data-filter="proximo">Próximamente</button>
+            </div>
+
+            <!-- Contenedor dinámico donde Javascript inyectará los eventos guardados -->
+            <div id="eventos-container" class="eventos-container"></div>
+
+            <!-- Mensaje cuando no hay eventos para el filtro seleccionado -->
+            <div id="mensaje-vacio" class="mensaje-vacio oculto">El dia de hoy no hay ningun evento</div>
         </section>
     </main>
 
@@ -148,7 +154,7 @@
     </footer>
 
     <!-- Carga de scripts: primero los datos, luego utilidades y por último la lógica de la agenda -->
-    <script src="../data/eventos.js"></script>
+    <script src="../data/data.js"></script>
     <script src="../js/utils.js"></script>
     <script src="../js/agenda.js"></script>
 </body>
