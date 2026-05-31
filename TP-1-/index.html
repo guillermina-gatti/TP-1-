@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icono de la pestaña -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Tipografías: Inria Serif + Montserrat (fallback) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?display=swap&family=Inria+Serif:wght@300;400;700&family=Montserrat:wght@300;400;700"
+        rel="stylesheet">
+    <!-- Hojas de estilo (CSS) -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/componentes.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!--Nombre de la página que aparece en la pestaña del navegador-->
+    <title>Inicio | Radar Indie</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="agenda.html">Mi Agenda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero-carousel">
+            <div class="hero-carousel-track" id="carousel-track">
+                <div class="carousel-slide" style="background-image: url('assets/img/Gemini_Generated_Image_a62j1wa62j1wa62j.png')"></div>
+                <div class="carousel-slide" style="background-image: url('https://turismo.buenosaires.gob.ar/sites/turismo/files/field/image/CCK.jpg')"></div>
+            </div>
+            <div class="hero::before"></div>
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <h1 class="hero-title">Tu agenda de eventos</h1>
+                    <p class="hero-subtitle">Talleres, charlas, recitales, ferias, meetups tech, eventos gamer y actividades culturales.
+                        <br>Todo en un solo lugar, todo para vos.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://blog.laminasyaceros.com/hs-fs/hubfs/20190618_060703704_bae190619-025f01.jpg_541755376.webp?width=970&name=20190618_060703704_bae190619-025f01.jpg_541755376.webp" alt="Banner de eventos">
+                </div>
+            </div>
+        </section>
+
+        <section class="presentacion-comunidad">
+            <div class="container">
+                <h2 class="comunidad-title">Nuestra Comunidad</h2>
+                <p class="comunidad-text">Somos un espacio pensado para conectar talleres, charlas, recitales y meetups tech...</p>
+
+                <div class="social-buttons">
+                    <a href="#" class="btn social">Whatsapp</a>
+                    <a href="#" class="btn social">Discord</a>
+                    <a href="#" class="btn social">Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Indie Events Radar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/data/eventos.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/data.js"></script>
+</body>
+
+</html>

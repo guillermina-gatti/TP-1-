@@ -1,3 +1,4 @@
+00
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,11 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <!-- Hojas de estilo (CSS) -->
-    <link rel="stylesheet" href="assets/css/componentes.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <!--Nombre de la página que aparece en la pestaña del navegador-->
-    <title>Cartelera de Eventos | Indie Events Radar</title>
+    <title>Mi Agenda Personal | Indie Events Radar</title>
 </head>
 
 <body>
@@ -47,63 +48,29 @@
             <!-- Navegación principal del sitio -->
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="eventos.html" class="active">Eventos</a></li>
-                    <li><a href="agenda.html">Mi Agenda</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="agenda.html" class="active">Mi Agenda</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Contenido principal de la cartelera de eventos -->
+    <!-- Contenido principal de la agenda personal -->
     <main>
-        <!-- Panel lateral para los filtros de búsqueda -->
-        <aside class="filtros-seccion">
-            <div class="filtro-grupo">
-                <label for="filtro-buscar">Buscar</label>
-                <input type="text" id="filtro-buscar" placeholder="Nombre del evento...">
-            </div>
-            <div class="filtro-grupo">
-                <label for="filtro-fecha">Fecha</label>
-                <input type="date" id="filtro-fecha" placeholder="dd/mm/aaaa">
-            </div>
-            <div class="filtro-grupo">
-                <label for="filtro-categoria">Categoría</label>
-                <select id="filtro-categoria">
-                    <option value="" disabled selected>Selecciona una opción</option>
-                </select>
-            </div>
-            <div class="filtro-grupo">
-                <label for="filtro-precio">Precio</label>
-                <select id="filtro-precio">
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="Todos">Todos</option>
-                    <option value="Gratuito">Gratuito</option>
-                    <option value="Pago">Pago</option>
-                </select>
-            </div>
-            <div class="filtro-grupo">
-                <label for="filtro-estado">Estado</label>
-                <select id="filtro-estado">
-                    <option value="" disabled selected>Selecciona una opción</option>
-                    <option value="Hoy">Hoy</option>
-                    <option value="Proximamente">Proximamente</option>
-                    <option value="Finalizado">Finalizado</option>
-                </select>
-            </div>
-        </aside>
+        <!-- Sección de los eventos guardados por el usuario -->
+        <section class="agenda-seccion">
+            <h2>Mis Eventos Guardados</h2>
 
-        <!-- Sección principal donde se muestra la cuadrícula de eventos -->
-        <section class="grilla-eventos-seccion">
-            <h2>Próximos Eventos</h2>
-            <!-- Contenedor dinámico donde Javascript inyectará los elementos <article> de cada tarjeta -->
-            <div id="contenedor-cards-eventos"></div>
+            <!-- Contenedor dinámico donde Javascript inyectará los eventos guardados en LocalStorage -->
+            <div id="contenedor-cards-agenda"></div>
+
+            <!-- Mensaje que se muestra si la agenda está vacía -->
+            <div id="mensaje-agenda-vacia" class="oculto">
+                <p>No tenés eventos agendados en este momento. ¡Explorá la cartelera!</p>
+            </div>
         </section>
-
-        <!-- Contenedor del modal de detalles del evento (fuera del flujo normal) -->
-        <aside id="modal-detalle-evento" class="modal-oculto">
-        </aside>
     </main>
 
     <!-- Enlace flotante de acción para contactar por WhatsApp -->
@@ -114,10 +81,10 @@
         <p>&copy; 2026 - Indie Events Radar. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Carga de scripts: datos, utilidades y lógica específica de la vista de eventos -->
-    <script src="assets/data/data.js"></script>
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/eventos.js"></script>
+    <!-- Carga de scripts: primero los datos, luego utilidades y por último la lógica de la agenda -->
+    <script src="../data/eventos.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/agenda.js"></script>
 </body>
 
 </html>
