@@ -37,10 +37,11 @@ TP1/
 │       ├── eventos.js           # Lógica de filtros, cards y modales
 │       ├── index.js             # Lógica del carrusel hero
 │       └── utils.js             # Brújula animada del nav
+│   └── pages/
+│       ├── agenda.html          # Eventos guardados (Mi Agenda)
+│       ├── contacto.html        # Formulario para publicar un evento
+│       └── eventos.html         # Cartelera completa con filtros
 ├── index.html                   # Página principal (Inicio)
-├── eventos.html                 # Cartelera completa con filtros
-├── agenda.html                  # Eventos guardados (Mi Agenda)
-├── contacto.html                # Formulario para publicar un evento
 ├── informe-ia.md                # Documentación de uso de IA
 └── README.md                    # Este archivo
 ```
@@ -113,14 +114,3 @@ El flujo de trabajo fue: desarrollar en `feature-developer` → probar → Pull 
 ## 📌 Proyecto
 **Idea 7: Indie Events Radar**
 Nicho: Cultura, eventos y comunidad.
-
----
-
-## 🤖 Uso de IA
-Se utilizaron herramientas de inteligencia artificial como apoyo durante el desarrollo. El detalle completo se encuentra en [`informe-ia.md`](./informe-ia.md).
-
----
-
-## 🔗 Links
-- **Repositorio:** *(pegar link de GitHub acá)*
-- **Deploy:** *(pegar link de Netlify acá)*
