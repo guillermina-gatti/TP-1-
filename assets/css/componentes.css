@@ -114,8 +114,9 @@
 /* ---------- Grilla de cards ---------- */
 #contenedor-cards-eventos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, 320px);
   gap: 24px;
+  justify-content: center;
 }
 
 #contenedor-cards-eventos > p {
@@ -138,8 +139,10 @@
   cursor: pointer;
   transition: box-shadow 0.25s, transform 0.25s;
   font-family: 'Montserrat', sans-serif;
-  height: 100%;
-  min-height: 420px;
+  width: 320px;
+  height: 420px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .card-evento:hover {
@@ -193,7 +196,7 @@
   color: #E0E1DD;
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -450,4 +453,188 @@ body.modal-abierto { overflow: hidden; }
 .modal-btn-cerrar-pie:hover {
   background-color: #D9D3C8;
   border-color: #A09A90;
+}
+
+/* ---------- Página de contacto ---------- */
+.contacto-seccion {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.contacto-intro h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #E0E1DD;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.contacto-intro p {
+  font-size: 0.95rem;
+  color: rgba(224, 225, 221, 0.75);
+  line-height: 1.6;
+}
+
+/* ---------- Formulario ---------- */
+.contacto-form-wrapper {
+  background-color: #1B263B99;
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-grupo:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grupo label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A8B99;
+}
+
+.form-requerido {
+  color: #C0392B;
+  margin-left: 2px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: #403E39;
+  background-color: #FFFFFF;
+  border: 1px solid #C8C2B8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-grupo select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  padding-right: 36px;
+  color: #B0B3B8;
+  cursor: pointer;
+}
+
+.form-grupo select:not(:invalid),
+.form-grupo select.seleccionado {
+  color: #403E39;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+  color: #B0B3B8;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  border-color: #7A8B99;
+  box-shadow: 0 0 0 3px rgba(122, 139, 153, 0.2);
+}
+
+/* Campo de precio detallado (se muestra solo si es pago) */
+.form-input-oculto {
+  display: none;
+  margin-top: 8px;
+}
+
+/* Contador de caracteres */
+.form-contador {
+  font-size: 0.72rem;
+  color: rgba(224, 225, 221, 0.45);
+  text-align: right;
+  margin-top: 2px;
+}
+
+/* Mensajes de error */
+.form-error {
+  font-size: 0.78rem;
+  color: #E74C3C;
+  min-height: 16px;
+  font-weight: 600;
+}
+
+/* Mensaje de éxito */
+.form-exito {
+  background-color: rgba(39, 174, 96, 0.15);
+  border: 1px solid rgba(39, 174, 96, 0.4);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2ecc71;
+  margin-bottom: 16px;
+}
+
+.form-exito-oculto {
+  display: none;
+}
+
+/* Botón de envío */
+.form-btn-enviar {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1B263B;
+  background-color: #E0E1DD;
+  border: none;
+  border-radius: 9999px;
+  padding: 14px 36px;
+  cursor: pointer;
+  margin-top: 24px;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.form-btn-enviar:hover {
+  background-color: #c8c9c5;
+  transform: translateY(-2px);
+}
+
+/* Responsive del formulario */
+@media (max-width: 600px) {
+  .contacto-form-wrapper {
+    padding: 20px 16px;
+  }
+
+  .form-fila {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-intro h1 {
+    font-size: 1.5rem;
+  }
 }

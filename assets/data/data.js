@@ -752,7 +752,7 @@ function aplicarFiltros() {
 
   // 3) Filtrar por precio ("Gratuito" o "Pago")
   if (precioOpcion === "Gratuito") {
-    resultado = resultado.filter(card => card.price && card.price.toLowerCase().includes("gratuito"));
+    resultado = resultado.filter(card => card.price && (card.price.toLowerCase().includes("gratuito") || card.price.toLowerCase().includes("gratis")));
   } else if (precioOpcion === "Pago") {
     resultado = resultado.filter(card => {
       const precioNum = parsearPrecio(card.price);
@@ -1019,4 +1019,6 @@ if (btnLimpiar) {
 }
 
 // Mostrar todas las cards al cargar
-renderCards(cards);
+if (document.querySelector("#contenedor-cards-eventos")) {
+  renderCards(cards);
+}
