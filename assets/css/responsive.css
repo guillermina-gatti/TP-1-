@@ -1,0 +1,229 @@
+/* RESPONSIVE — Carrusel y media queries */
+
+/* ---------- Carrusel ---------- */
+.hero-carrusel {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.carrusel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.carrusel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Colores de fondo fallback mientras carga la imagen */
+.carrusel-slide--1 {
+    background-color: #0D2B6E;
+}
+
+.carrusel-slide--2 {
+    background-color: #0A3A8A;
+}
+
+.carrusel-slide--3 {
+    background-color: #0C4FA3;
+}
+
+.carrusel-slide--4 {
+    background-color: #0B3D7A;
+}
+
+.carrusel-slide--5 {
+    background-color: #082560;
+}
+
+/* Imagen de fondo del slide */
+.carrusel-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Overlay degradado encima de la imagen */
+.carrusel-slide::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 20, 80, 0.88) 0%,
+            rgba(0, 20, 80, 0.30) 55%,
+            rgba(0, 20, 80, 0.05) 100%);
+    pointer-events: none;
+}
+
+.carrusel-contenido {
+    position: relative;
+    z-index: 1;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.carrusel-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.carrusel-contenido h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.carrusel-contenido p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0;
+}
+
+.carrusel-cta {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 8px 22px;
+    align-self: flex-start;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.carrusel-slide:hover .carrusel-cta {
+    background-color: rgba(255, 255, 255, 0.18);
+    border-color: #ffffff;
+}
+
+/* Botones prev / next */
+.carrusel-btn {
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0, 20, 80, 0.50);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    line-height: 1;
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(0, 20, 80, 0.85);
+}
+
+.carrusel-btn--prev {
+    left: 16px;
+}
+
+.carrusel-btn--next {
+    right: 16px;
+}
+
+/* Dots */
+.carrusel-dots {
+    position: absolute;
+    bottom: 18px;
+    right: 22px;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.carrusel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.25s, transform 0.25s;
+}
+
+.carrusel-dot.activo {
+    background-color: #ffffff;
+    transform: scale(1.35);
+}
+
+/* ---------- Media queries ---------- */
+@media (max-width: 700px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 36px 20px 24px;
+    }
+
+    .nav-sitename {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-carrusel {
+        height: 260px;
+    }
+
+    .carrusel-contenido {
+        padding: 20px 22px;
+    }
+
+    .carrusel-contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .carrusel-contenido p {
+        font-size: 0.8rem;
+    }
+
+    .carrusel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+}

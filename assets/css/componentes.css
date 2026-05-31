@@ -1,82 +1,7 @@
-/* ================================================
-   COMPONENTES — Página de Eventos
-   Paleta: fondo #F3EFE7 | texto #403E39
-   Tipografía: Montserrat (cargada en el HTML)
-   ================================================ */
+/* COMPONENTES — Elementos reutilizables del sitio */
 
-/* ---------- Reset base ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #F3EFE7;
-  color: #403E39;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ---------- Header ---------- */
-body>header {
-  background-color: #EDE8DF;
-  border-bottom: 1px solid #D9D3C8;
-  padding: 16px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-body>header .logo img {
-  height: 56px;
-  width: 56px;
-  object-fit: cover;
-  object-position: left center;
-  border-radius: 50%;
-}
-
-body>header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
-
-body>header nav ul li a {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #6B6761;
-  letter-spacing: 0.02em;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-body>header nav ul li a:hover,
-body>header nav ul li a.active {
-  color: #403E39;
-  border-bottom-color: #403E39;
-}
-
-/* ---------- Main layout ---------- */
-main {
-  flex: 1;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 24px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-/* ---------- Sección título ---------- */
-.grilla-eventos-seccion>h2 {
+/* ---------- Sección título de grilla ---------- */
+.grilla-eventos-seccion > h2 {
   font-size: 1.75rem;
   font-weight: 700;
   color: #403E39;
@@ -84,7 +9,39 @@ main {
   letter-spacing: -0.02em;
 }
 
-/* ---------- ASIDE — Barra de filtros ---------- */
+/* ---------- Íconos sociales en sección comunidad ---------- */
+.comunidad-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: center;
+}
+
+.comunidad-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.comunidad-socials a:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+  transform: scale(1.12);
+}
+
+.comunidad-socials svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+/* ---------- Barra de filtros ---------- */
 .filtros-seccion {
   background-color: rgb(27 38 75 / 42%);
   border: none;
@@ -106,7 +63,6 @@ main {
   font-size: 0.75rem;
   font-weight: 600;
   color: #7A8B99;
-  /* Azul claro grisáceo sutil */
   margin-bottom: 6px;
 }
 
@@ -118,7 +74,6 @@ main {
   background-color: #FFFFFF;
   border: 1px solid #C8C2B8;
   border-radius: 8px;
-  /* Esquinas redondeadas */
   padding: 10px 14px;
   outline: none;
   width: 100%;
@@ -133,12 +88,9 @@ main {
   background-size: 14px;
   padding-right: 36px;
   color: #B0B3B8;
-  /* Color inicial del placeholder simulado */
 }
 
-.filtros-seccion select:not(:invalid) {
-  color: #403E39;
-}
+.filtros-seccion select:not(:invalid) { color: #403E39; }
 
 .filtros-seccion input:focus,
 .filtros-seccion select:focus {
@@ -148,22 +100,18 @@ main {
 
 .filtros-seccion input::placeholder {
   color: #B0B3B8;
-  /* Gris clara */
   font-family: sans-serif;
 }
 
-.filtros-seccion input[type="date"] {
-  position: relative;
-}
+.filtros-seccion input[type="date"] { position: relative; }
 
-/* Icono oscuro de calendario */
 .filtros-seccion input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   opacity: 0.6;
   filter: invert(0.4);
 }
 
-/* ---------- GRILLA DE CARDS ---------- */
+/* ---------- Grilla de cards ---------- */
 #contenedor-cards-eventos {
   display: grid;
   grid-template-columns: repeat(auto-fill, 320px);
@@ -171,8 +119,7 @@ main {
   justify-content: center;
 }
 
-/* Mensaje sin resultados */
-#contenedor-cards-eventos>p {
+#contenedor-cards-eventos > p {
   grid-column: 1 / -1;
   font-size: 0.95rem;
   color: #9C9790;
@@ -181,7 +128,7 @@ main {
   padding: 40px 0;
 }
 
-/* ---------- CARD individual ---------- */
+/* ---------- Card individual ---------- */
 .card-evento {
   background-color: #1B263B99;
   border-radius: 22px;
@@ -203,7 +150,7 @@ main {
   transform: translateY(-4px);
 }
 
-/* --- 1. Header: badges --- */
+/* --- Badges --- */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -220,22 +167,11 @@ main {
   white-space: nowrap;
 }
 
-.badge-categoria {
-  background-color: #E0E1DD;
-  color: #1B263B;
-}
+.badge-categoria    { background-color: #E0E1DD; color: #1B263B; }
+.badge-proximamente { background-color: #E0E1DD; color: #1B263B; }
+.badge-terminado    { background-color: #C0392B; color: #ffffff; }
 
-.badge-proximamente {
-  background-color: #E0E1DD;
-  color: #1B263B;
-}
-
-.badge-terminado {
-  background-color: #C0392B;
-  color: #ffffff;
-}
-
-/* --- 2. Body: título + descripción --- */
+/* --- Cuerpo: título + descripción --- */
 .card-body {
   display: flex;
   flex-direction: column;
@@ -265,12 +201,8 @@ main {
   overflow: hidden;
 }
 
-/* --- 3. Specs: iconos + datos --- */
-.card-specs {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+/* --- Specs: iconos + datos --- */
+.card-specs { display: flex; flex-direction: column; gap: 12px; }
 
 .card-spec-row {
   display: flex;
@@ -278,10 +210,7 @@ main {
   gap: 12px;
 }
 
-.card-spec-row svg {
-  flex-shrink: 0;
-  opacity: 0.7;
-}
+.card-spec-row svg { flex-shrink: 0; opacity: 0.7; }
 
 .card-spec-row span {
   font-family: 'Montserrat', sans-serif;
@@ -290,7 +219,7 @@ main {
   opacity: 0.85;
 }
 
-/* --- 4. Footer: precio + CTA --- */
+/* --- Footer de card: precio + botón --- */
 .card-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 16px;
@@ -331,8 +260,8 @@ main {
   transform: none;
 }
 
-/* Detalle expandible */
-#contenedor-cards-eventos>div [id^="detalle-"] {
+/* --- Detalle expandible --- */
+#contenedor-cards-eventos > div [id^="detalle-"] {
   background-color: #F3EFE7;
   border-top: 1px solid #D9D3C8;
   padding: 14px 16px;
@@ -341,41 +270,28 @@ main {
   gap: 8px;
 }
 
-#contenedor-cards-eventos>div [id^="detalle-"] p {
+#contenedor-cards-eventos > div [id^="detalle-"] p {
   font-size: 0.8rem;
   color: #6B6761;
   padding: 0;
 }
 
-#contenedor-cards-eventos>div [id^="detalle-"] strong {
-  color: #403E39;
-  font-weight: 600;
-}
+#contenedor-cards-eventos > div [id^="detalle-"] strong { color: #403E39; font-weight: 600; }
 
-#contenedor-cards-eventos>div [id^="detalle-"] a {
+#contenedor-cards-eventos > div [id^="detalle-"] a {
   color: #7A746C;
   text-decoration: underline;
   word-break: break-all;
   transition: color 0.2s;
 }
 
-#contenedor-cards-eventos>div [id^="detalle-"] a:hover {
-  color: #403E39;
-}
+#contenedor-cards-eventos > div [id^="detalle-"] a:hover { color: #403E39; }
 
-/* ---------- MODAL ---------- */
+/* ---------- Modal ---------- */
+body.modal-abierto { overflow: hidden; }
 
-/* Impide el scroll del body mientras el modal está abierto */
-body.modal-abierto {
-  overflow: hidden;
-}
+#modal-detalle-evento.modal-oculto { display: none; }
 
-/* Estado oculto por defecto */
-#modal-detalle-evento.modal-oculto {
-  display: none;
-}
-
-/* Overlay: fondo oscuro semitransparente que ocupa toda la pantalla */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -389,16 +305,10 @@ body.modal-abierto {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-/* Tarjeta central del modal */
 .modal-contenido {
   background-color: #EDE8DF;
   border: 1px solid #D9D3C8;
@@ -414,18 +324,10 @@ body.modal-abierto {
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
 }
 
-/* Encabezado: título + botón ✕ */
 .modal-header {
   display: flex;
   align-items: flex-start;
@@ -463,7 +365,6 @@ body.modal-abierto {
   color: #403E39;
 }
 
-/* Párrafo de descripción (context) */
 .modal-descripcion {
   font-size: 0.875rem;
   color: #6B6761;
@@ -472,7 +373,6 @@ body.modal-abierto {
   padding-left: 14px;
 }
 
-/* Grid de campos 2 columnas */
 .modal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -506,11 +406,8 @@ body.modal-abierto {
   transition: color 0.2s;
 }
 
-.modal-campo p a:hover {
-  color: #403E39;
-}
+.modal-campo p a:hover { color: #403E39; }
 
-/* Botones del pie del modal */
 .modal-botones {
   display: flex;
   gap: 12px;
@@ -558,36 +455,186 @@ body.modal-abierto {
   border-color: #A09A90;
 }
 
-/* ---------- Footer ---------- */
-body>footer {
-  background-color: #EDE8DF;
-  border-top: 1px solid #D9D3C8;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.8rem;
-  color: #9C9790;
-  font-family: 'Montserrat', sans-serif;
+/* ---------- Página de contacto ---------- */
+.contacto-seccion {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
 }
 
-/* ---------- Botón WhatsApp ---------- */
-.btn-whatsapp {
+.contacto-intro h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #E0E1DD;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.contacto-intro p {
+  font-size: 0.95rem;
+  color: rgba(224, 225, 221, 0.75);
+  line-height: 1.6;
+}
+
+/* ---------- Formulario ---------- */
+.contacto-form-wrapper {
+  background-color: #1B263B99;
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-grupo:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grupo label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A8B99;
+}
+
+.form-requerido {
+  color: #C0392B;
+  margin-left: 2px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
   font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background-color: #403E39;
-  color: #F3EFE7;
-  text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
+  color: #403E39;
+  background-color: #FFFFFF;
+  border: 1px solid #C8C2B8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-grupo select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  padding-right: 36px;
+  color: #B0B3B8;
+  cursor: pointer;
+}
+
+.form-grupo select:not(:invalid),
+.form-grupo select.seleccionado {
+  color: #403E39;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+  color: #B0B3B8;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  border-color: #7A8B99;
+  box-shadow: 0 0 0 3px rgba(122, 139, 153, 0.2);
+}
+
+/* Campo de precio detallado (se muestra solo si es pago) */
+.form-input-oculto {
+  display: none;
+  margin-top: 8px;
+}
+
+/* Contador de caracteres */
+.form-contador {
+  font-size: 0.72rem;
+  color: rgba(224, 225, 221, 0.45);
+  text-align: right;
+  margin-top: 2px;
+}
+
+/* Mensajes de error */
+.form-error {
+  font-size: 0.78rem;
+  color: #E74C3C;
+  min-height: 16px;
   font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 50px;
-  box-shadow: 0 4px 16px rgba(64, 62, 57, 0.25);
-  transition: background-color 0.2s, transform 0.2s;
-  z-index: 100;
 }
 
-.btn-whatsapp:hover {
-  background-color: #2C2B27;
+/* Mensaje de éxito */
+.form-exito {
+  background-color: rgba(39, 174, 96, 0.15);
+  border: 1px solid rgba(39, 174, 96, 0.4);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2ecc71;
+  margin-bottom: 16px;
+}
+
+.form-exito-oculto {
+  display: none;
+}
+
+/* Botón de envío */
+.form-btn-enviar {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1B263B;
+  background-color: #E0E1DD;
+  border: none;
+  border-radius: 9999px;
+  padding: 14px 36px;
+  cursor: pointer;
+  margin-top: 24px;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.form-btn-enviar:hover {
+  background-color: #c8c9c5;
   transform: translateY(-2px);
+}
+
+/* Responsive del formulario */
+@media (max-width: 600px) {
+  .contacto-form-wrapper {
+    padding: 20px 16px;
+  }
+
+  .form-fila {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-intro h1 {
+    font-size: 1.5rem;
+  }
 }
