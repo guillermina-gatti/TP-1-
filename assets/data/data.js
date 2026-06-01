@@ -43,7 +43,7 @@ const cards = [
     title: "De Händel a Strauss (Ciclo Clásica Joven)",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-27",
-    time: "No disponible",
+    time: "19:00",
     location: "Salón Dorado, Teatro Colón (Cerrito 628, CABA)",
     price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
@@ -56,7 +56,7 @@ const cards = [
     title: "Música Antigua - Legados",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-28",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Colón (Cerrito 628, CABA)",
     price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
@@ -69,7 +69,7 @@ const cards = [
     title: "Réquiem de Mozart",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-30",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Colón (Cerrito 628, CABA)",
     price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
@@ -82,7 +82,7 @@ const cards = [
     title: "Ópera: Dementia (Estreno Mundial)",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-31",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Colón (Cerrito 628, CABA)",
     price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
@@ -95,7 +95,7 @@ const cards = [
     title: "Ricardo Arjona",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
-    time: "No disponible",
+    time: "19:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
     price: "Gratis",
     organizer: "https://www.movistararena.com.ar",
@@ -108,7 +108,7 @@ const cards = [
     title: "La Beriso",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
     price: "Gratis",
     organizer: "https://vorterix.com/teatro/",
@@ -121,7 +121,7 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
-    time: "No disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
     price: "Gratis",
     organizer: "https://velez.com.ar/",
@@ -134,7 +134,7 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-24",
-    time: "No disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
     price: "$99.060",
     organizer: "https://velez.com.ar/",
@@ -147,7 +147,7 @@ const cards = [
     title: "La Beriso",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-24",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
     price: "Gratis",
     organizer: "https://vorterix.com/teatro/",
@@ -160,7 +160,7 @@ const cards = [
     title: "Andrés Calamaro",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-26",
-    time: "No disponible",
+    time: "19:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
     price: "Gratis",
     organizer: "https://www.movistararena.com.ar",
@@ -173,7 +173,7 @@ const cards = [
     title: "Drowning Pool",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-26",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
     price: "$41.710",
     organizer: "https://vorterix.com/teatro/",
@@ -199,7 +199,7 @@ const cards = [
     title: "Flor Paz",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-28",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
     price: "Gratis",
     organizer: "https://vorterix.com/teatro/",
@@ -212,7 +212,7 @@ const cards = [
     title: "Los Angeles Azules",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-29",
-    time: "No disponible",
+    time: "19:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
     price: "Gratis",
     organizer: "https://www.movistararena.com.ar",
@@ -225,7 +225,7 @@ const cards = [
     title: "Natalia Lafourcade (Cancionera Tour)",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-29",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Gran Rex (Av. Corrientes 857, CABA)",
     price: "Gratis",
     organizer: "https://teatro-granrex.com.ar/",
@@ -238,7 +238,7 @@ const cards = [
     title: "Pomme",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
-    time: "No disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
     price: "$90.360",
     organizer: "https://vorterix.com/teatro/",
@@ -251,7 +251,7 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
-    time: "No disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
     price: "$99.840",
     organizer: "https://velez.com.ar/",
@@ -264,7 +264,7 @@ const cards = [
     title: "Julia Zenko",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
-    time: "No disponible",
+    time: "19:00",
     location: "Café Berlin (Av. San Martín 6656, CABA)",
     price: "$111.210",
     organizer: "https://cafeberlinbuenosaires.com.ar/",
@@ -277,7 +277,7 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-31",
-    time: "No disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
     price: "$83.410",
     organizer: "https://velez.com.ar/",
@@ -290,7 +290,7 @@ const cards = [
     title: "Soda Stereo 'Ecos'",
     category: ["🎵 Música", "Rock/Pop"],
     date: "2026-06-04",
-    time: "No disponible",
+    time: "19:00",
     location: "Movistar Arena - Humboldt 450, CABA",
     price: "Gratis",
     organizer: "No disponible",
@@ -740,9 +740,14 @@ function aplicarFiltros() {
 
   let resultado = [...cards];
 
-  // 1) Filtrar por búsqueda (título)
+  // 1) Filtrar por búsqueda (inicial del título)
   if (busqueda) {
-    resultado = resultado.filter(card => card.title && card.title.toLowerCase().includes(busqueda));
+    resultado = resultado.filter(card => {
+      if (!card.title) return false;
+      const tituloMinuscula = card.title.toLowerCase();
+      // Verifica si el título comienza con el texto de búsqueda
+      return tituloMinuscula.startsWith(busqueda);
+    });
   }
 
   // 2) Filtrar por fecha (si hay fecha seleccionada)
@@ -874,7 +879,7 @@ function renderCards(lista) {
       <!-- Pie de la tarjeta con el precio y la acción principal -->
       <footer class="card-footer">
         <span class="card-precio">${card.price}</span>
-        <button class="card-btn-agregar" onclick="event.stopPropagation(); agregarAgenda(${card.id})" ${atributoDisabled}>${textoBoton}</button>
+        <button class="card-btn-agregar" onclick="event.stopPropagation(); agregarAgenda(${card.id}, event)" ${atributoDisabled}>${textoBoton}</button>
       </footer>
     `;
 
@@ -969,7 +974,7 @@ function cerrarModal() {
 // -----------------------------------------------
 // AGENDA — Guardar evento en localStorage
 // -----------------------------------------------
-function agregarAgenda(id) {
+function agregarAgenda(id, event) {
   let agenda = JSON.parse(localStorage.getItem("agenda")) || [];
 
   // Evitar duplicados

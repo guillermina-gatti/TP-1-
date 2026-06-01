@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.getElementById('form-publicar-evento');
+    if (!form) return;
+    
     const inputPrecioTipo = document.getElementById('evento-precio-tipo');
     const inputPrecio = document.getElementById('evento-precio');
     const textarea = document.getElementById('evento-descripcion');
