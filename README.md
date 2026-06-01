@@ -103,8 +103,8 @@ git push origin dev
 ## 👥 Integrantes
 
 - Alumno 1: [Brandon Velasquez]
-- Alumno 2: [Nombre]
-- Alumno 3: [Nombre]
+- Alumno 2: [Ayelén Ortega]
+- Alumno 3: [Guillermina Gatti]
 
 ---
 
