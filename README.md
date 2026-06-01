@@ -1,42 +1,46 @@
-# Indie Events Radar - TP Integrador
+# Indie Events Radar
 
-## Link al proyecto 🌐
+## Descripción
+Agenda de eventos independientes de Buenos Aires: talleres, charlas, recitales, ferias, muestras y meetups. El sitio permite explorar la cartelera completa, filtrar eventos por categoría, precio y fecha, guardar los que te interesan en una agenda personal y enviar una solicitud para publicar tu propio evento.
 
-*(Coloca aquí el link de Netlify cuando hagas el deploy)*
+---
+
+## 🌐 Link al proyecto
+[https://indie-events-radar.netlify.app/](https://indie-events-radar.netlify.app/)
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
-
 - HTML5 / CSS3 (Estructura semántica y diseño responsivo)
-- JavaScript (Filtros, modales, carrusel y control de estados)
-- LocalStorage (Persistencia de la agenda personal)
-- Git / GitHub (Estrategia de ramificación avanzada)
+- JavaScript vanilla (Filtros, modales, carrusel y control de estados)
+- localStorage (Persistencia de la agenda personal y solicitudes de contacto)
+- Git / GitHub (Control de versiones y trabajo colaborativo)
 - Netlify (Despliegue automático)
 - Trello (Organización ágil en equipo)
 
 ---
 
 ## 📁 Estructura del proyecto
-
-```text
+```
 TP1/
 ├── assets/
 │   ├── css/
-│   │   ├── componentes.css      # Estilos de cards, modales y botones
+│   │   ├── componentes.css      # Estilos de cards, modales, formulario y botones
 │   │   ├── responsive.css       # Adaptabilidad para móviles y tablets
-│   │   └── styles.css           # Estilos generales y variables
+│   │   └── styles.css           # Estilos generales y base del sitio
 │   ├── data/
-│   │   └── eventos.js           # Array de objetos de eventos
+│   │   └── eventos.js           # Array de objetos con los datos de eventos
 │   ├── img/                     # Imágenes, logos y fondos del sitio
 │   └── js/
-│       ├── agenda.js            # Lógica de Mi Agenda
-│       ├── data.js              # Carga centralizada de datos
+│       ├── agenda.js            # Lógica de Mi Agenda (localStorage)
+│       ├── contacto.js          # Validación y envío del formulario de contacto
 │       ├── eventos.js           # Lógica de filtros, cards y modales
-│       └── utils.js             # Funciones auxiliares reutilizables
-├── agenda.html                  # Eventos guardados (Mi Agenda)
-├── contacto.html                # Formulario de contacto
-├── eventos.html                 # Cartelera completa con filtros
+│       ├── index.js             # Lógica del carrusel hero
+│       └── utils.js             # Brújula animada del nav
+│   └── pages/
+│       ├── agenda.html          # Eventos guardados (Mi Agenda)
+│       ├── contacto.html        # Formulario para publicar un evento
+│       └── eventos.html         # Cartelera completa con filtros
 ├── index.html                   # Página principal (Inicio)
 ├── informe-ia.md                # Documentación de uso de IA
 └── README.md                    # Este archivo
@@ -44,71 +48,83 @@ TP1/
 
 ---
 
-## 🖥️ Páginas y Funcionalidades
+## 🖥️ Páginas y funcionalidades
 
 ### index.html — Inicio
-
-Presentación de la comunidad, carrusel dinámico de destacados y botón flotante de WhatsApp.
+Presentación de la comunidad y carrusel dinámico de eventos destacados con soporte táctil y navegación por puntos.
 
 ### eventos.html — Eventos
+Cartelera con filtros dinámicos por categoría, precio y fecha. Estados visuales diferenciados para eventos pasados, de hoy y futuros. Modal de detalle e incorporación a la agenda personal.
 
-Cartelera con filtros por categoría, precio y fecha. Desafío de estados visuales (pasado/hoy/futuro), modales de detalle e incorporación a la agenda.
-
-### agenda.html — Mi agenda
-
-Renderizado dinámico de eventos guardados con LocalStorage, opción de eliminar tarjetas y mensaje adaptativo de agenda vacía.
+### agenda.html — Mi Agenda
+Renderizado dinámico de eventos guardados con localStorage, opción de eliminar tarjetas individualmente y mensaje adaptativo cuando la agenda está vacía.
 
 ### contacto.html — Contacto
-
-Formulario de atención con validaciones nativas y desde el DOM, enlaces a redes sociales y botón de asistencia.
+Formulario para solicitar la publicación de un evento, con validaciones desde el DOM y guardado de la solicitud en localStorage.
 
 ---
 
-## 📊 Metodología y Control de Versiones (Git)
+## ⚙️ Funcionalidades JavaScript
+1. **Filtros dinámicos** por categoría, precio y fecha en la cartelera de eventos.
+2. **Agenda personal** con localStorage: guardar y eliminar eventos, persistencia entre sesiones.
+3. **Estados visuales** de eventos: pasado, hoy y próximo, diferenciados en las cards.
+4. **Modal de detalle** por evento con información completa.
+5. **Carrusel hero** animado con autoavance, soporte táctil y navegación por teclado.
+6. **Formulario de contacto** con validaciones en el DOM y guardado de solicitud en localStorage.
 
-Se utilizó un tablero Trello basado en Scrum para la división de tareas en microrrequerimientos y un flujo de trabajo estructurado en tres niveles de ramas:
+---
 
-- **main:** Código estable conectado a Netlify para producción.
-- **testing:** Rama intermedia para integrar tareas y testear errores antes de subir a main.
-- **dev:** Rama base de trabajo diario donde se unifica el desarrollo general.
-- **feature/...:** Ramas temporales creadas desde dev para resolver las tarjetas individuales de Trello de forma segura.
+## 📖 Instrucciones de uso
 
-### Flujo de comandos básico
+1. Abrí el sitio desde el link de deploy.
+2. En **Inicio** explorá los eventos destacados en el carrusel.
+3. En **Eventos** filtrá la cartelera por categoría, precio o fecha.
+4. Hacé clic en una card para ver el detalle completo del evento.
+5. Usá el botón **Agregar a agenda** para guardar los eventos que te interesen.
+6. En **Mi Agenda** encontrás todos tus eventos guardados y podés eliminarlos.
+7. En **Contacto** completá el formulario para solicitar publicar tu propio evento.
 
-```bash
-git checkout dev
-git pull origin dev
-git checkout -b feature/nombre-tarea
+---
 
-# (Se programa la tarea en el editor de código)
+## 📊 Metodología y control de versiones (Git)
 
-git add .
-git commit -m "Descripción corta de la tarea resuelta"
+| Rama | Rol | Descripción |
+|---|---|---|
+| `main` | Producción | Código estable. Conectada a Netlify para el deploy automático. Solo recibe cambios por Pull Request. |
+| `feature-developer` | Desarrollo | Rama de trabajo diario. Acá se desarrolla, prueba y unifica el código antes de subir a main. |
 
-git checkout dev
-git merge feature/nombre-tarea
-git push origin dev
-```
+El flujo de trabajo fue: desarrollar en `feature-developer` → probar → Pull Request hacia `main` cuando el código estaba estable.
 
 ---
 
 ## 🎯 Estado final
-
 - Sitio 100% completo, responsivo y funcional.
-- Código modularizado en arquitectura limpia (css/, js/, data/ e img/ separados por responsabilidades).
-- Flujo coordinado de Git Flow y Trello implementados con éxito para el trabajo colaborativo.
+- Código modularizado en arquitectura limpia (`css/`, `js/`, `data/` e `img/` separados por responsabilidad).
+- Flujo de Git y Trello coordinados para el trabajo colaborativo.
 
 ---
 
 ## 👥 Integrantes
+<<<<<<< HEAD
 
 - Alumno 1: [Brandon Velasquez]
 - Alumno 2: [Ayelén Ortega]
 - Alumno 3: [Guillermina Gatti]
+=======
+- Brandon Velasquez
+- Ayelén Ortega
+- Guillermina Gatti
+>>>>>>> feature-developer
 
 ---
 
 ## 📌 Proyecto
+**Idea 7: Indie Events Radar**
+Nicho: Cultura, eventos y comunidad.
 
-**Idea 7: Indie Events Radar**  
-*Nicho: Cultura, eventos y comunidad*
+---
+
+## 🤖 Uso de IA
+Se utilizaron herramientas de inteligencia artificial como apoyo durante el desarrollo. El detalle completo se encuentra en [`informe-ia.md`](./informe-ia.md).
+
+---

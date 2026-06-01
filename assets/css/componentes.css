@@ -1,81 +1,6 @@
-/* ================================================
-   COMPONENTES — Página de Eventos
-   Paleta: fondo #F3EFE7 | texto #403E39
-   Tipografía: Montserrat (cargada en el HTML)
-   ================================================ */
+/* COMPONENTES — Elementos reutilizables del sitio */
 
-/* ---------- Reset base ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #F3EFE7;
-  color: #403E39;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ---------- Header ---------- */
-body>header {
-  background-color: #EDE8DF;
-  border-bottom: 1px solid #D9D3C8;
-  padding: 16px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-body>header .logo img {
-  height: 56px;
-  width: 56px;
-  object-fit: cover;
-  object-position: left center;
-  border-radius: 50%;
-}
-
-body>header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
-
-body>header nav ul li a {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #6B6761;
-  letter-spacing: 0.02em;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-body>header nav ul li a:hover,
-body>header nav ul li a.active {
-  color: #403E39;
-  border-bottom-color: #403E39;
-}
-
-/* ---------- Main layout ---------- */
-main {
-  flex: 1;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 24px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-/* ---------- Sección título ---------- */
+/* ---------- Sección título de grilla ---------- */
 .grilla-eventos-seccion>h2 {
   font-size: 1.75rem;
   font-weight: 700;
@@ -84,7 +9,39 @@ main {
   letter-spacing: -0.02em;
 }
 
-/* ---------- ASIDE — Barra de filtros ---------- */
+/* ---------- Íconos sociales en sección comunidad ---------- */
+.comunidad-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: center;
+}
+
+.comunidad-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.comunidad-socials a:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+  transform: scale(1.12);
+}
+
+.comunidad-socials svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+/* ---------- Barra de filtros ---------- */
 .filtros-seccion {
   background-color: rgb(27 38 75 / 42%);
   border: none;
@@ -106,7 +63,6 @@ main {
   font-size: 0.75rem;
   font-weight: 600;
   color: #7A8B99;
-  /* Azul claro grisáceo sutil */
   margin-bottom: 6px;
 }
 
@@ -118,7 +74,6 @@ main {
   background-color: #FFFFFF;
   border: 1px solid #C8C2B8;
   border-radius: 8px;
-  /* Esquinas redondeadas */
   padding: 10px 14px;
   outline: none;
   width: 100%;
@@ -133,7 +88,6 @@ main {
   background-size: 14px;
   padding-right: 36px;
   color: #B0B3B8;
-  /* Color inicial del placeholder simulado */
 }
 
 .filtros-seccion select:not(:invalid) {
@@ -148,7 +102,6 @@ main {
 
 .filtros-seccion input::placeholder {
   color: #B0B3B8;
-  /* Gris clara */
   font-family: sans-serif;
 }
 
@@ -156,21 +109,20 @@ main {
   position: relative;
 }
 
-/* Icono oscuro de calendario */
 .filtros-seccion input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   opacity: 0.6;
   filter: invert(0.4);
 }
 
-/* ---------- GRILLA DE CARDS ---------- */
+/* ---------- Grilla de cards ---------- */
 #contenedor-cards-eventos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, 320px);
   gap: 24px;
+  justify-content: center;
 }
 
-/* Mensaje sin resultados */
 #contenedor-cards-eventos>p {
   grid-column: 1 / -1;
   font-size: 0.95rem;
@@ -180,7 +132,7 @@ main {
   padding: 40px 0;
 }
 
-/* ---------- CARD individual ---------- */
+/* ---------- Card individual ---------- */
 .card-evento {
   background-color: #1B263B99;
   border-radius: 22px;
@@ -191,8 +143,10 @@ main {
   cursor: pointer;
   transition: box-shadow 0.25s, transform 0.25s;
   font-family: 'Montserrat', sans-serif;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  width: 320px;
+  height: 420px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .card-evento:hover {
@@ -200,7 +154,7 @@ main {
   transform: translateY(-4px);
 }
 
-/* --- 1. Header: badges --- */
+/* --- Badges --- */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -232,7 +186,7 @@ main {
   color: #ffffff;
 }
 
-/* --- 2. Body: título + descripción --- */
+/* --- Cuerpo: título + descripción --- */
 .card-body {
   display: flex;
   flex-direction: column;
@@ -257,12 +211,12 @@ main {
   color: #E0E1DD;
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* --- 3. Specs: iconos + datos --- */
+/* --- Specs: iconos + datos --- */
 .card-specs {
   display: flex;
   flex-direction: column;
@@ -287,7 +241,7 @@ main {
   opacity: 0.85;
 }
 
-/* --- 4. Footer: precio + CTA --- */
+/* --- Footer de card: precio + botón --- */
 .card-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 16px;
@@ -328,7 +282,7 @@ main {
   transform: none;
 }
 
-/* Detalle expandible */
+/* --- Detalle expandible --- */
 #contenedor-cards-eventos>div [id^="detalle-"] {
   background-color: #F3EFE7;
   border-top: 1px solid #D9D3C8;
@@ -360,19 +314,15 @@ main {
   color: #403E39;
 }
 
-/* ---------- MODAL ---------- */
-
-/* Impide el scroll del body mientras el modal está abierto */
+/* ---------- Modal ---------- */
 body.modal-abierto {
   overflow: hidden;
 }
 
-/* Estado oculto por defecto */
 #modal-detalle-evento.modal-oculto {
   display: none;
 }
 
-/* Overlay: fondo oscuro semitransparente que ocupa toda la pantalla */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -395,14 +345,13 @@ body.modal-abierto {
   }
 }
 
-/* Tarjeta central del modal */
 .modal-contenido {
-  background-color: #EDE8DF;
-  border: 1px solid #D9D3C8;
+  background-color: #1B263B;
+  border: 1px solid rgba(224, 225, 221, 0.2);
   border-radius: 16px;
   width: 100%;
   max-width: 520px;
-  box-shadow: 0 20px 60px rgba(64, 62, 57, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -422,7 +371,6 @@ body.modal-abierto {
   }
 }
 
-/* Encabezado: título + botón ✕ */
 .modal-header {
   display: flex;
   align-items: flex-start;
@@ -433,17 +381,17 @@ body.modal-abierto {
 .modal-header h2 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #403E39;
+  color: #E0E1DD;
   line-height: 1.3;
   flex: 1;
 }
 
 .modal-btn-cerrar {
   font-family: 'Montserrat', sans-serif;
-  background-color: #F3EFE7;
-  border: 1px solid #C8C2B8;
+  background-color: rgba(224, 225, 221, 0.1);
+  border: 1px solid rgba(224, 225, 221, 0.2);
   border-radius: 8px;
-  color: #6B6761;
+  color: #E0E1DD;
   font-size: 0.85rem;
   width: 32px;
   height: 32px;
@@ -456,25 +404,23 @@ body.modal-abierto {
 }
 
 .modal-btn-cerrar:hover {
-  background-color: #D9D3C8;
-  color: #403E39;
+  background-color: rgba(224, 225, 221, 0.2);
+  color: #ffffff;
 }
 
-/* Párrafo de descripción (context) */
 .modal-descripcion {
   font-size: 0.875rem;
-  color: #6B6761;
+  color: rgba(224, 225, 221, 0.85);
   line-height: 1.6;
-  border-left: 3px solid #C8C2B8;
+  border-left: 3px solid #4A6B8A;
   padding-left: 14px;
 }
 
-/* Grid de campos 2 columnas */
 .modal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 24px;
-  border-top: 1px solid #D9D3C8;
+  border-top: 1px solid rgba(224, 225, 221, 0.15);
   padding-top: 20px;
 }
 
@@ -484,34 +430,33 @@ body.modal-abierto {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #9C9790;
+  color: rgba(224, 225, 221, 0.55);
   margin-bottom: 4px;
 }
 
 .modal-campo p {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #403E39;
+  color: #E0E1DD;
   line-height: 1.4;
 }
 
 .modal-campo p a {
-  color: #7A746C;
+  color: #E0E1DD;
   text-decoration: underline;
   font-weight: 500;
   word-break: break-all;
-  transition: color 0.2s;
+  transition: opacity 0.2s;
 }
 
 .modal-campo p a:hover {
-  color: #403E39;
+  opacity: 0.8;
 }
 
-/* Botones del pie del modal */
 .modal-botones {
   display: flex;
   gap: 12px;
-  border-top: 1px solid #D9D3C8;
+  border-top: 1px solid rgba(224, 225, 221, 0.15);
   padding-top: 20px;
 }
 
@@ -522,8 +467,8 @@ body.modal-abierto {
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #F3EFE7;
-  background-color: #403E39;
+  color: #1B263B;
+  background-color: #E0E1DD;
   border: none;
   border-radius: 50px;
   padding: 12px 20px;
@@ -532,7 +477,7 @@ body.modal-abierto {
 }
 
 .modal-btn-registrar:hover {
-  background-color: #2C2B27;
+  background-color: #c8c9c5;
   transform: translateY(-1px);
 }
 
@@ -541,9 +486,9 @@ body.modal-abierto {
   flex: 1;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #403E39;
+  color: #E0E1DD;
   background-color: transparent;
-  border: 1.5px solid #C8C2B8;
+  border: 1.5px solid rgba(224, 225, 221, 0.3);
   border-radius: 50px;
   padding: 12px 20px;
   cursor: pointer;
@@ -551,40 +496,531 @@ body.modal-abierto {
 }
 
 .modal-btn-cerrar-pie:hover {
-  background-color: #D9D3C8;
-  border-color: #A09A90;
+  background-color: rgba(224, 225, 221, 0.1);
+  border-color: rgba(224, 225, 221, 0.5);
 }
 
-/* ---------- Footer ---------- */
-body>footer {
-  background-color: #EDE8DF;
-  border-top: 1px solid #D9D3C8;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.8rem;
-  color: #9C9790;
-  font-family: 'Montserrat', sans-serif;
+/* ---------- Página de contacto ---------- */
+.contacto-seccion {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
 }
 
-/* ---------- Botón WhatsApp ---------- */
-.btn-whatsapp {
+.contacto-intro h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #E0E1DD;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.contacto-intro p {
+  font-size: 0.95rem;
+  color: rgba(224, 225, 221, 0.75);
+  line-height: 1.6;
+}
+
+/* ---------- Formulario ---------- */
+.contacto-form-wrapper {
+  background-color: #1B263B99;
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-grupo:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grupo label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A8B99;
+}
+
+.form-requerido {
+  color: #C0392B;
+  margin-left: 2px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
   font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background-color: #403E39;
-  color: #F3EFE7;
-  text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
+  color: #403E39;
+  background-color: #FFFFFF;
+  border: 1px solid #C8C2B8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-grupo select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  padding-right: 36px;
+  color: #B0B3B8;
+  cursor: pointer;
+}
+
+.form-grupo select:not(:invalid),
+.form-grupo select.seleccionado {
+  color: #403E39;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+  color: #B0B3B8;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  border-color: #7A8B99;
+  box-shadow: 0 0 0 3px rgba(122, 139, 153, 0.2);
+}
+
+/* Campo de precio detallado (se muestra solo si es pago) */
+.form-input-oculto {
+  display: none;
+  margin-top: 8px;
+}
+
+/* Contador de caracteres */
+.form-contador {
+  font-size: 0.72rem;
+  color: rgba(224, 225, 221, 0.45);
+  text-align: right;
+  margin-top: 2px;
+}
+
+/* Mensajes de error */
+.form-error {
+  font-size: 0.78rem;
+  color: #E74C3C;
+  min-height: 16px;
   font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 50px;
-  box-shadow: 0 4px 16px rgba(64, 62, 57, 0.25);
-  transition: background-color 0.2s, transform 0.2s;
-  z-index: 100;
 }
 
-.btn-whatsapp:hover {
-  background-color: #2C2B27;
+/* Mensaje de éxito */
+.form-exito {
+  background-color: rgba(39, 174, 96, 0.15);
+  border: 1px solid rgba(39, 174, 96, 0.4);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2ecc71;
+  margin-bottom: 16px;
+}
+
+.form-exito-oculto {
+  display: none;
+}
+
+/* Botón de envío */
+.form-btn-enviar {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1B263B;
+  background-color: #E0E1DD;
+  border: none;
+  border-radius: 9999px;
+  padding: 14px 36px;
+  cursor: pointer;
+  margin-top: 24px;
+  width: 100%;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.form-btn-enviar:hover {
+  background-color: #c8c9c5;
   transform: translateY(-2px);
+}
+
+/* Responsive del formulario */
+@media (max-width: 600px) {
+  .contacto-form-wrapper {
+    padding: 20px 16px;
+  }
+
+  .form-fila {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-intro h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---------- Botón Random Evento ---------- */
+.btn-random-anim {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #415A77;
+  color: #E0E1DD;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 2px solid #E0E1DD;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-random-anim:hover {
+  background-color: #E0E1DD;
+  color: #1B263B;
+  transform: scale(1.05);
+}
+
+/* ---------- Animación del Gato ASCII ---------- */
+.animacion-oculta {
+  display: none !important;
+}
+
+#animacion-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.90);
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.animacion-gato {
+  color: #E0E1DD;
+  font-family: monospace;
+  font-size: min(1.5vw, 1.2rem);
+  line-height: 1.1;
+  position: absolute;
+  left: -50%;
+  white-space: pre;
+  transition: left 3s linear;
+}
+
+/* ========== BIENVENIDA — Manifiesto editorial ========== */
+
+.bienvenida {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* --- Hero de bienvenida --- */
+.bienvenida-hero {
+  position: relative;
+  text-align: center;
+  padding: 56px 32px 40px;
+  background: linear-gradient(
+    170deg,
+    rgba(15, 30, 53, 0.85) 0%,
+    rgba(27, 38, 59, 0.65) 50%,
+    rgba(74, 107, 138, 0.25) 100%
+  );
+  border-radius: 22px 22px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+  overflow: hidden;
+}
+
+.bienvenida-hero-deco {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.bienvenida-compass {
+  width: 180px;
+  height: 180px;
+  animation: bienvenida-spin 30s linear infinite;
+}
+
+@keyframes bienvenida-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.bienvenida-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #E0E1DD;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.bienvenida-titulo span {
+  display: block;
+  background: linear-gradient(135deg, #C0392B, #e74c3c, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bienvenida-bajada {
+  font-size: 0.95rem;
+  color: rgba(224, 225, 221, 0.78);
+  line-height: 1.75;
+  max-width: 740px;
+  margin: 0 auto 20px;
+}
+
+.bienvenida-bajada strong {
+  color: #E0E1DD;
+  font-weight: 700;
+}
+
+.bienvenida-intro-destacado {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #E0E1DD;
+  padding: 16px 24px;
+  background: rgba(192, 57, 43, 0.12);
+  border-left: 3px solid #C0392B;
+  border-radius: 0 10px 10px 0;
+  display: inline-block;
+  text-align: left;
+  max-width: 680px;
+}
+
+/* --- Bloques de contenido --- */
+.bienvenida-bloque {
+  padding: 36px 32px;
+  background-color: rgba(27, 38, 59, 0.45);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.bienvenida-bloque::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 32px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent
+  );
+}
+
+.bienvenida-subtitulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #E0E1DD;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.01em;
+}
+
+.bienvenida-subtitulo-icono {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.bienvenida-bloque p {
+  font-size: 0.9rem;
+  color: rgba(224, 225, 221, 0.75);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.bienvenida-bloque p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Feature cards (Música, Teatro, Arte) --- */
+.bienvenida-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.bienvenida-feature {
+  background: linear-gradient(
+    145deg,
+    rgba(15, 30, 53, 0.7),
+    rgba(27, 38, 59, 0.5)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.bienvenida-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  border-color: rgba(192, 57, 43, 0.35);
+}
+
+.bienvenida-feature-icono {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.bienvenida-feature h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #E0E1DD;
+  margin-bottom: 8px;
+}
+
+.bienvenida-feature p {
+  font-size: 0.82rem !important;
+  color: rgba(224, 225, 221, 0.65) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* --- CTA final --- */
+.bienvenida-cta {
+  text-align: center;
+  padding: 40px 32px 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 38, 59, 0.45) 0%,
+    rgba(15, 30, 53, 0.75) 100%
+  );
+  border-radius: 0 0 22px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+}
+
+.bienvenida-pregunta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #E0E1DD;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.bienvenida-btn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1B263B;
+  background: linear-gradient(135deg, #E0E1DD 0%, #c8c9c5 100%);
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 9999px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.bienvenida-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35),
+              0 0 20px rgba(224, 225, 221, 0.15);
+}
+
+/* --- Responsive bienvenida --- */
+@media (max-width: 768px) {
+  .bienvenida-hero {
+    padding: 40px 20px 32px;
+  }
+
+  .bienvenida-titulo {
+    font-size: 1.6rem;
+  }
+
+  .bienvenida-bloque {
+    padding: 28px 20px;
+  }
+
+  .bienvenida-features {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .bienvenida-pregunta {
+    font-size: 1.3rem;
+  }
+
+  .bienvenida-compass {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bienvenida-intro-destacado {
+    font-size: 0.95rem;
+    padding: 14px 18px;
+  }
+}
+/* ── Estilos para eventos personalizados (publicados desde Contacto) ── */
+.badge-personalizado {
+    background-color: #2c7a4b;
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.modal-badge-comunidad {
+    font-size: 0.8rem;
+    color: #2c7a4b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.agenda-badge-comunidad {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #2c7a4b;
+    font-weight: 700;
+    margin-bottom: 4px;
 }

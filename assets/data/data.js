@@ -6,7 +6,7 @@ const cards = [
     date: "2026-05-23",
     time: "10:00",
     location: "Pabellón Verde, La Rural (Av. Sarmiento 2704, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://larural.com.ar",
     registration: "https://larural.com.ar",
     availability: "Disponible",
@@ -19,7 +19,7 @@ const cards = [
     date: "2026-05-30",
     time: "12:00",
     location: "Pabellón Ocre, La Rural (Av. Sarmiento 2704, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://larural.com.ar",
     registration: "https://larural.com.ar",
     availability: "Disponible",
@@ -32,7 +32,7 @@ const cards = [
     date: "2026-05-31",
     time: "12:00",
     location: "Pabellón Ocre, La Rural (Av. Sarmiento 2704, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://larural.com.ar",
     registration: "https://larural.com.ar",
     availability: "Disponible",
@@ -43,9 +43,9 @@ const cards = [
     title: "De Händel a Strauss (Ciclo Clásica Joven)",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-27",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Salón Dorado, Teatro Colón (Cerrito 628, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
     registration: "https://teatrocolon.org.ar/",
     availability: "Disponible",
@@ -56,9 +56,9 @@ const cards = [
     title: "Música Antigua - Legados",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-28",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Colón (Cerrito 628, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
     registration: "https://teatrocolon.org.ar/",
     availability: "Disponible",
@@ -69,9 +69,9 @@ const cards = [
     title: "Réquiem de Mozart",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-30",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Colón (Cerrito 628, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
     registration: "https://teatrocolon.org.ar/",
     availability: "Disponible",
@@ -82,9 +82,9 @@ const cards = [
     title: "Ópera: Dementia (Estreno Mundial)",
     category: ["🎻 Música Clásica", "Cultura", "Ópera"],
     date: "2026-05-31",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Colón (Cerrito 628, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://teatrocolon.org.ar/",
     registration: "https://teatrocolon.org.ar/",
     availability: "Disponible",
@@ -95,9 +95,9 @@ const cards = [
     title: "Ricardo Arjona",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://www.movistararena.com.ar",
     registration: "https://www.movistararena.com.ar",
     availability: "Disponible",
@@ -108,9 +108,9 @@ const cards = [
     title: "La Beriso",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://vorterix.com/teatro/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -121,9 +121,9 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-23",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://velez.com.ar/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -134,9 +134,9 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-24",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
-    price: "$99.060 (Valor de referencia)",
+    price: "$99.060",
     organizer: "https://velez.com.ar/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -147,9 +147,9 @@ const cards = [
     title: "La Beriso",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-24",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://vorterix.com/teatro/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -160,9 +160,9 @@ const cards = [
     title: "Andrés Calamaro",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-26",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://www.movistararena.com.ar",
     registration: "https://www.movistararena.com.ar",
     availability: "Disponible",
@@ -173,9 +173,9 @@ const cards = [
     title: "Drowning Pool",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-26",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
-    price: "$41.710 (Valor de referencia)",
+    price: "$41.710",
     organizer: "https://vorterix.com/teatro/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -188,7 +188,7 @@ const cards = [
     date: "2026-05-28",
     time: "21:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
-    price: "Desde $50.000",
+    price: "$50.000",
     organizer: "https://www.movistararena.com.ar",
     registration: "https://www.movistararena.com.ar",
     availability: "Disponible",
@@ -199,9 +199,9 @@ const cards = [
     title: "Flor Paz",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-28",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://vorterix.com/teatro/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -212,9 +212,9 @@ const cards = [
     title: "Los Angeles Azules",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-29",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Movistar Arena (Humboldt 450, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://www.movistararena.com.ar",
     registration: "https://www.movistararena.com.ar",
     availability: "Disponible",
@@ -225,9 +225,9 @@ const cards = [
     title: "Natalia Lafourcade (Cancionera Tour)",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-29",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Gran Rex (Av. Corrientes 857, CABA)",
-    price: "Dato no disponible",
+    price: "Gratis",
     organizer: "https://teatro-granrex.com.ar/",
     registration: "https://teatro-granrex.com.ar/",
     availability: "Disponible",
@@ -238,9 +238,9 @@ const cards = [
     title: "Pomme",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Teatro Vorterix (Av. Federico Lacroze 3455, CABA)",
-    price: "$90.360 (Valor de referencia)",
+    price: "$90.360",
     organizer: "https://vorterix.com/teatro/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -251,9 +251,9 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
-    price: "$99.840 (Valor de referencia)",
+    price: "$99.840",
     organizer: "https://velez.com.ar/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -264,9 +264,9 @@ const cards = [
     title: "Julia Zenko",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-30",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Café Berlin (Av. San Martín 6656, CABA)",
-    price: "$111.210 (Valor de referencia)",
+    price: "$111.210",
     organizer: "https://cafeberlinbuenosaires.com.ar/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
@@ -277,14 +277,404 @@ const cards = [
     title: "Airbag",
     category: ["🎵 Música", "Recitales"],
     date: "2026-05-31",
-    time: "Dato no disponible",
+    time: "19:00",
     location: "Estadio José Amalfitani - Vélez Sarsfield (Av. Juan B. Justo 9200, CABA)",
-    price: "$83.410 (Valor de referencia)",
+    price: "$83.410",
     organizer: "https://velez.com.ar/",
     registration: "https://www.ticketle.com.ar/buenos-aires/may",
     availability: "Disponible",
     context: "Cuarta y última fecha documentada en mayo del masivo show de la banda en el estadio de Vélez."
-  }
+  },
+  {
+    id: 23,
+    title: "Soda Stereo 'Ecos'",
+    category: ["🎵 Música", "Rock/Pop"],
+    date: "2026-06-04",
+    time: "19:00",
+    location: "Movistar Arena - Humboldt 450, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 24,
+    title: "Andrés Calamaro",
+    category: ["🎵 Música", "Rock Nacional"],
+    date: "2026-06-03",
+    time: "21:00",
+    location: "Movistar Arena - Humboldt 450, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 25,
+    title: "Babasónicos",
+    category: ["🎵 Música", "Rock/Pop"],
+    date: "2026-06-25",
+    time: "21:00",
+    location: "Movistar Arena - Humboldt 450, CABA",
+    price: "$55.000",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 26,
+    title: "Barbi Recanati y Lucy Patané",
+    category: ["🎵 Música", "Indie/Rock"],
+    date: "2026-06-05",
+    time: "19:00",
+    location: "Teatro Flores - Av. Rivadavia 7806, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 27,
+    title: "Asspera - Back to the bizarra actitud",
+    category: ["🎵 Música", "Metal"],
+    date: "2026-06-06",
+    time: "19:00",
+    location: "Teatro Flores - Av. Rivadavia 7806, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 28,
+    title: "Bizarren Miusik Parti",
+    category: ["🎉 Fiesta", "Música Popular"],
+    date: "2026-06-12",
+    time: "23:00",
+    location: "Teatro Flores - Av. Rivadavia 7806, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 29,
+    title: "La Chancha Muda",
+    category: ["🎵 Música", "Rock Nacional"],
+    date: "2026-06-13",
+    time: "19:00",
+    location: "Teatro Flores - Av. Rivadavia 7806, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 30,
+    title: "Fiesta Ricotera XXL 100% Redondo",
+    category: ["🎵 Música", "Tributo"],
+    date: "2026-06-13",
+    time: "23:30",
+    location: "Teatro Flores - Av. Rivadavia 7806, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 31,
+    title: "Martín Delp celebra a Nat king Cole Trio",
+    category: ["🎵 Música", "Jazz"],
+    date: "2026-06-02",
+    time: "16:00",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 32,
+    title: "Getz & Gilberto",
+    category: ["🎵 Música", "Jazz"],
+    date: "2026-06-07",
+    time: "09:00",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 33,
+    title: "Elis & Tom",
+    category: ["🎵 Música", "Jazz"],
+    date: "2026-06-10",
+    time: "16:00",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 34,
+    title: "Eve Cornelious + 6",
+    category: ["🎵 Música", "Jazz"],
+    date: "2026-06-18",
+    time: "16:00",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 35,
+    title: "Chet Baker Sings",
+    category: ["🎵 Música", "Jazz"],
+    date: "2026-06-23",
+    time: "16:00",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 36,
+    title: "The Ella Fitzgerald Songbook",
+    category: ["🎵 Música", "Jazz"],
+    date: "2026-06-25",
+    time: "16:00",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 37,
+    title: "Vision Sakamoto",
+    category: ["🎵 Música", "Jazz/Instrumental"],
+    date: "2026-06-28",
+    time: "17:30",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 38,
+    title: "Mel Muñiz y Rodrigo Núñez",
+    category: ["🎵 Música", "Voz y Piano"],
+    date: "2026-06-30",
+    time: "16:00",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "No disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 39,
+    title: "Malena W. y Vera con Joaquín Ponferrada",
+    category: ["🎵 Música", "Piano y Voz"],
+    date: "2026-06-30",
+    time: "18:30",
+    location: "Bebop Club - Uriarte 1658, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 40,
+    title: "El Plan De La Mariposa",
+    category: ["🎵 Música", "Rock/Fusión"],
+    date: "2026-06-13",
+    time: "No disponible",
+    location: "Movistar Arena - Humboldt 450, CABA",
+    price: "$88.300",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 41,
+    title: "Jóvenes Pordioseros",
+    category: ["🎵 Música", "Rock Nacional"],
+    date: "2026-06-13",
+    time: "No disponible",
+    location: "Teatro Vorterix - Av. Federico Lacroze 3455, CABA",
+    price: "$35.050",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este evento musical imperdible reúne a los mejores artistas de la escena local para brindar un espectáculo único e inolvidable en el centro de la Ciudad Autónoma de Buenos Aires durante junio de 2026."
+  },
+  {
+    id: 42,
+    title: "Argentina Rail-Tech Forum 2026",
+    category: ["👔 Negocios", "Tecnología"],
+    date: "2026-06-10",
+    time: "09:00",
+    location: "Sala Legamaster, AHK Argentina - Av. Corrientes 327, CABA",
+    price: "Gratis",
+    organizer: "No disponible",
+    registration: "No disponible",
+    availability: "Disponible",
+    context: "Este prestigioso evento corporativo internacional conecta a líderes y empresas clave de la región, fomentando el desarrollo de la industria en la vibrante Ciudad Autónoma de Buenos Aires en el 2026!!."
+  },
+  {
+    id: 43,
+    title: "Billy Elliot El Musical",
+    category: ["🎭 Teatro", "Musical"],
+    date: "2026-06-05",
+    time: "20:00",
+    location: "Teatro Opera - Av. Corrientes 860, CABA",
+    price: "$82.623",
+    organizer: "https://www.linkedin.com/company/teatro-opera/",
+    registration: "https://www.entradafan.com.ar/entradas-billy-elliot-buenos-aires/e/15972",
+    availability: "Disponible",
+    context: "Llega a la vibrante calle Corrientes la aclamada obra Billy Elliot El Musical. Esta súper producción internacional promete emocionar al público de Buenos Aires con su increíble historia de superación, coreografías espectaculares y la música original de Elton John. Una cita teatral absolutamente imperdible para este mes de junio."
+  },
+  {
+    id: 44,
+    title: "FITHEP LATAM – EXPOALIMENTARIA 2026",
+    category: ["👔 Negocios", "Alimentación"],
+    date: "2026-06-01",
+    time: "13:00",
+    location: "La Rural, Pabellón Azul - Av. Sarmiento 2704, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/la-rural-s.a./",
+    registration: "https://larural.com.ar/calendario/",
+    availability: "Disponible",
+    context: "FITHEP Expoalimentaria 2026 abre sus puertas en La Rural para mostrar lo último en tecnología e innovación para la elaboración de alimentos fuera del hogar. Profesionales gastronómicos de toda Latinoamérica se reúnen en Buenos Aires para potenciar sus negocios, descubrir nuevas tendencias en el mercado y concretar alianzas estratégicas internacionales."
+  },
+  {
+    id: 45,
+    title: "BATEV 30º Exposición Internacional de la Construcción y la Vivienda",
+    category: ["🏗️ Exposiciones", "Construcción"],
+    date: "2026-06-24",
+    time: "14:00",
+    location: "La Rural, Pabellón Azul - Av. Sarmiento 2704, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/la-rural-s.a./",
+    registration: "https://larural.com.ar/calendario/",
+    availability: "Disponible",
+    context: "BATEV celebra su trigésima edición consolidándose como la exposición líder de la construcción y la vivienda en la región. Durante cuatro días, los referentes de la industria exhibirán las innovaciones más recientes del mercado, debatiendo el futuro del sector arquitectónico en Argentina y brindando seminarios de actualización profesional de primer nivel."
+  },
+  {
+    id: 46,
+    title: "Ritmos Argentinos: Edición Rock",
+    category: ["🎵 Música", "Rock/Pop"],
+    date: "2026-06-05",
+    time: "17:00",
+    location: "Palacio Libertad, Plaza Seca - Sarmiento 151, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/ministeriodeculturaar/",
+    registration: "https://palaciolibertad.gob.ar/agenda/",
+    availability: "Disponible",
+    context: "El Palacio Libertad inaugura el mes con una espectacular edición rockera de su clásico ciclo Ritmos Argentinos. Las bandas emergentes más destacadas del circuito local se presentan de forma libre y gratuita en la emblemática Plaza Seca, ofreciendo a los ciudadanos un atardecer lleno de energía, música en vivo y un profundo recorrido por nuestra identidad cultural y musical."
+  },
+  {
+    id: 47,
+    title: "XVI Congreso Internacional de TangoTerapia",
+    category: ["💃 Danza", "Tango/Salud"],
+    date: "2026-06-10",
+    time: "14:00",
+    location: "Palacio Libertad, Sala Federal - Sarmiento 151, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/ministeriodeculturaar/",
+    registration: "https://palaciolibertad.gob.ar/agenda/",
+    availability: "Disponible",
+    context: "El prestigioso Congreso Internacional de TangoTerapia llega a la Sala Federal del Palacio Libertad para explorar los increíbles beneficios terapéuticos del baile porteño por excelencia. Médicos, psicólogos y bailarines compartirán talleres, ponencias y demostraciones prácticas sobre cómo el abrazo tanguero impacta positivamente en la rehabilitación neurológica y emocional de las personas."
+  },
+  {
+    id: 48,
+    title: "Federico Pereiro Quinteto con Paula Castignola",
+    category: ["🎵 Música", "Tango"],
+    date: "2026-06-12",
+    time: "19:00",
+    location: "Palacio Libertad, Plaza Seca - Sarmiento 151, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/ministeriodeculturaar/",
+    registration: "https://palaciolibertad.gob.ar/agenda/",
+    availability: "Disponible",
+    context: "En el marco del exitoso ciclo Otoño Tango, el virtuoso bandoneonista Federico Pereiro se presenta junto a su quinteto y la inigualable voz de Paula Castignola. Este concierto de entrada libre promete deslumbrar al público porteño con arreglos contemporáneos que revitalizan los clásicos inmortales del cancionero arrabalero argentino."
+  },
+  {
+    id: 49,
+    title: "Sciammarella Tango: Concierto y Conferencia",
+    category: ["🎵 Música", "Tango/Historia"],
+    date: "2026-06-12",
+    time: "19:00",
+    location: "Palacio Libertad, Salón de Honor - Sarmiento 151, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/ministeriodeculturaar/",
+    registration: "https://palaciolibertad.gob.ar/agenda/",
+    availability: "Disponible",
+    context: "La aclamada orquesta femenina Sciammarella Tango protagoniza una noche mágica en el Salón de Honor del Palacio Libertad. Más allá de deleitar con su impecable interpretación musical, el evento incluye una fascinante conferencia sobre la recuperación del patrimonio cultural oculto de las mujeres que hicieron grande la historia del tango en Buenos Aires."
+  },
+  {
+    id: 50,
+    title: "Mirta Alvarez: Concierto de Guitarra y Cuerdas",
+    category: ["🎵 Música", "Tango Instrumental"],
+    date: "2026-06-13",
+    time: "18:00",
+    location: "Palacio Libertad, Salón de Honor - Sarmiento 151, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/ministeriodeculturaar/",
+    registration: "https://palaciolibertad.gob.ar/agenda/",
+    availability: "Disponible",
+    context: "La destacada guitarrista argentina Mirta Alvarez ofrecerá un concierto sublime en el Salón de Honor, acompañada por un ensamble de cuerdas de primer nivel. En esta presentación en vivo, interpretará piezas fundamentales del folklore y el tango, destacando la riqueza armónica y la profunda sensibilidad poética que la consagró internacionalmente."
+  },
+  {
+    id: 51,
+    title: "Proyección Piazzolla: Homenaje a Astor",
+    category: ["🎵 Música", "Tango/Homenaje"],
+    date: "2026-06-14",
+    time: "19:00",
+    location: "Palacio Libertad, Salón de Honor - Sarmiento 151, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/ministeriodeculturaar/",
+    registration: "https://palaciolibertad.gob.ar/agenda/",
+    availability: "Disponible",
+    context: "Los amantes del tango vanguardista tienen una cita ineludible en el Palacio Libertad para conmemorar el inmenso legado de Astor Piazzolla. Destacados instrumentistas y cantantes del ámbito local recorrerán su obra vocal menos conocida, rindiendo un emotivo tributo musical a uno de los compositores más revolucionarios del siglo veinte."
+  },
+  {
+    id: 52,
+    title: "Mitos y Leyendas de Argentina: La Salamanca",
+    category: ["🎭 Teatro", "Cultura/Folklore"],
+    date: "2026-06-25",
+    time: "20:00",
+    location: "Palacio Libertad, Sala Argentina - Sarmiento 151, CABA",
+    price: "Gratis",
+    organizer: "https://www.linkedin.com/company/ministeriodeculturaar/",
+    registration: "https://palaciolibertad.gob.ar/agenda/",
+    availability: "Disponible",
+    context: "Una fascinante obra inmersiva que se adentra en el corazón del folklore nacional para explorar los misterios de La Salamanca. A través de una impactante puesta en escena, narrativas cautivadoras y música autóctona, los asistentes viajarán por las creencias más arraigadas del norte argentino en la majestuosa Sala Argentina del Palacio Libertad."
+  },
 ]
 // -----------------------------------------------
 // Función auxiliar: convierte el string de precio
@@ -292,7 +682,7 @@ const cards = [
 // -----------------------------------------------
 function parsearPrecio(precioStr) {
   // Si no tiene dato, devolvemos null
-  if (!precioStr || precioStr.toLowerCase().includes("dato no disponible")) {
+  if (!precioStr || precioStr.toLowerCase().includes("no disponible")) {
     return null;
   }
   // Eliminamos "$", "Desde ", "(Valor de referencia)", puntos de miles
@@ -316,8 +706,8 @@ function cargarCategorias() {
 
   const categoriasSet = new Set();
   cards.forEach(card => {
-    if (Array.isArray(card.category)) {
-      card.category.forEach(cat => categoriasSet.add(cat));
+    if (Array.isArray(card.category) && card.category.length > 0) {
+      categoriasSet.add(card.category[0]);
     } else if (card.category) {
       categoriasSet.add(card.category);
     }
@@ -350,9 +740,14 @@ function aplicarFiltros() {
 
   let resultado = [...cards];
 
-  // 1) Filtrar por búsqueda (título)
+  // 1) Filtrar por búsqueda (inicial del título)
   if (busqueda) {
-    resultado = resultado.filter(card => card.title && card.title.toLowerCase().includes(busqueda));
+    resultado = resultado.filter(card => {
+      if (!card.title) return false;
+      const tituloMinuscula = card.title.toLowerCase();
+      // Verifica si el título comienza con el texto de búsqueda
+      return tituloMinuscula.startsWith(busqueda);
+    });
   }
 
   // 2) Filtrar por fecha (si hay fecha seleccionada)
@@ -362,7 +757,7 @@ function aplicarFiltros() {
 
   // 3) Filtrar por precio ("Gratuito" o "Pago")
   if (precioOpcion === "Gratuito") {
-    resultado = resultado.filter(card => card.price && card.price.toLowerCase().includes("gratuito"));
+    resultado = resultado.filter(card => card.price && (card.price.toLowerCase().includes("gratuito") || card.price.toLowerCase().includes("gratis")));
   } else if (precioOpcion === "Pago") {
     resultado = resultado.filter(card => {
       const precioNum = parsearPrecio(card.price);
@@ -370,11 +765,11 @@ function aplicarFiltros() {
     });
   }
 
-  // 4) Filtrar por categoría
+  // 4) Filtrar por categoría (solo la categoría principal)
   if (categoriaOpcion && categoriaOpcion !== "Todas" && categoriaOpcion !== "") {
     resultado = resultado.filter(card => {
       if (Array.isArray(card.category)) {
-        return card.category.includes(categoriaOpcion);
+        return card.category[0] === categoriaOpcion;
       }
       return card.category === categoriaOpcion;
     });
@@ -416,6 +811,8 @@ function renderCards(lista) {
     return;
   }
 
+  let agenda = JSON.parse(localStorage.getItem("agenda")) || [];
+
   const hoy = new Date();
   hoy.setHours(0, 0, 0, 0);
 
@@ -445,6 +842,10 @@ function renderCards(lista) {
     // Formatear fecha para mostrar
     const opcionesFecha = { day: 'numeric', month: 'long', year: 'numeric' };
     const fechaFormateada = fechaEvento.toLocaleDateString('es-AR', opcionesFecha);
+
+    const yaEnAgenda = agenda.includes(card.id);
+    const textoBoton = yaEnAgenda ? "✓ Añadido" : "Añadir +";
+    const atributoDisabled = yaEnAgenda ? "disabled" : "";
 
     cardElement.innerHTML = `
       <!-- Cabecera de la tarjeta con etiquetas descriptivas -->
@@ -478,7 +879,7 @@ function renderCards(lista) {
       <!-- Pie de la tarjeta con el precio y la acción principal -->
       <footer class="card-footer">
         <span class="card-precio">${card.price}</span>
-        <button class="card-btn-agregar" onclick="event.stopPropagation(); agregarAgenda(${card.id})">Añadir +</button>
+        <button class="card-btn-agregar" onclick="event.stopPropagation(); agregarAgenda(${card.id}, event)" ${atributoDisabled}>${textoBoton}</button>
       </footer>
     `;
 
@@ -573,7 +974,7 @@ function cerrarModal() {
 // -----------------------------------------------
 // AGENDA — Guardar evento en localStorage
 // -----------------------------------------------
-function agregarAgenda(id) {
+function agregarAgenda(id, event) {
   let agenda = JSON.parse(localStorage.getItem("agenda")) || [];
 
   // Evitar duplicados
@@ -585,15 +986,10 @@ function agregarAgenda(id) {
   agenda.push(id);
   localStorage.setItem("agenda", JSON.stringify(agenda));
 
-  // Feedback visual: cambiar texto del botón brevemente
+  // Feedback visual: cambiar texto del botón permanentemente
   const btn = event.target;
-  const textoOriginal = btn.textContent;
   btn.textContent = "✓ Añadido";
   btn.disabled = true;
-  setTimeout(function () {
-    btn.textContent = textoOriginal;
-    btn.disabled = false;
-  }, 1500);
 }
 
 // -----------------------------------------------
@@ -628,4 +1024,6 @@ if (btnLimpiar) {
 }
 
 // Mostrar todas las cards al cargar
-renderCards(cards);
+if (document.querySelector("#contenedor-cards-eventos")) {
+  renderCards(cards);
+}
