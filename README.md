@@ -25,6 +25,7 @@ Agenda de eventos independientes de Buenos Aires: talleres, charlas, recitales, 
 TP1/
 ├── assets/
 │   ├── css/
+│   │   ├── agenda.css
 │   │   ├── componentes.css      # Estilos de cards, modales, formulario y botones
 │   │   ├── responsive.css       # Adaptabilidad para móviles y tablets
 │   │   └── styles.css           # Estilos generales y base del sitio

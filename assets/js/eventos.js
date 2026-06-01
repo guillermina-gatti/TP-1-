@@ -95,6 +95,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const agenda = getAgenda().map(String); // normalizar a string
 
+        // Ordenar: primero "Hoy", luego "Proximamente" (por fecha más cercana), y al final "Finalizado"
+        const hoy = new Date(); hoy.setHours(0,0,0,0);
+        filtrados.sort((a, b) => {
+            const fechaA = new Date(a.date + 'T00:00:00');
+            const fechaB = new Date(b.date + 'T00:00:00');
+            const terminoA = fechaA < hoy ? 1 : 0;
+            const terminoB = fechaB < hoy ? 1 : 0;
+            // Los finalizados van al final
+            if (terminoA !== terminoB) return terminoA - terminoB;
+            // Dentro del mismo grupo, ordenar por fecha ascendente
+            return fechaA - fechaB;
+        });
+
         contenedor.innerHTML = filtrados.map(c => {
             const est = calcEstado(c.date);
             const badgeEstado = est === 'Finalizado'

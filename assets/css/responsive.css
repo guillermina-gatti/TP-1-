@@ -9,7 +9,8 @@
 .hero-carrusel {
     position: relative;
     width: 100%;
-    height: 380px;
+    /* Altura responsive: mín 300px, crece con el viewport, máx 520px */
+    height: clamp(300px, 35vw, 520px);
     overflow: hidden;
     border-radius: 16px;
 }
