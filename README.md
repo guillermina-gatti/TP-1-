@@ -6,7 +6,7 @@ Agenda de eventos independientes de Buenos Aires: talleres, charlas, recitales, 
 ---
 
 ## 🌐 Link al proyecto
-*(Pegar link de Netlify acá)*
+[https://indie-events-radar.netlify.app/](https://indie-events-radar.netlify.app/)
 
 ---
 
