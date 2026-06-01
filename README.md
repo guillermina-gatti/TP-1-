@@ -105,16 +105,9 @@ El flujo de trabajo fue: desarrollar en `feature-developer` → probar → Pull 
 ---
 
 ## 👥 Integrantes
-<<<<<<< HEAD
-
-- Alumno 1: [Brandon Velasquez]
-- Alumno 2: [Ayelén Ortega]
-- Alumno 3: [Guillermina Gatti]
-=======
 - Brandon Velasquez
 - Ayelén Ortega
 - Guillermina Gatti
->>>>>>> feature-developer
 
 ---
 
