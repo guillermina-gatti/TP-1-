@@ -731,3 +731,271 @@ body.modal-abierto {
   white-space: pre;
   transition: left 3s linear;
 }
+
+/* ========== BIENVENIDA — Manifiesto editorial ========== */
+
+.bienvenida {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* --- Hero de bienvenida --- */
+.bienvenida-hero {
+  position: relative;
+  text-align: center;
+  padding: 56px 32px 40px;
+  background: linear-gradient(
+    170deg,
+    rgba(15, 30, 53, 0.85) 0%,
+    rgba(27, 38, 59, 0.65) 50%,
+    rgba(74, 107, 138, 0.25) 100%
+  );
+  border-radius: 22px 22px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+  overflow: hidden;
+}
+
+.bienvenida-hero-deco {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.bienvenida-compass {
+  width: 180px;
+  height: 180px;
+  animation: bienvenida-spin 30s linear infinite;
+}
+
+@keyframes bienvenida-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.bienvenida-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #E0E1DD;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.bienvenida-titulo span {
+  display: block;
+  background: linear-gradient(135deg, #C0392B, #e74c3c, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bienvenida-bajada {
+  font-size: 0.95rem;
+  color: rgba(224, 225, 221, 0.78);
+  line-height: 1.75;
+  max-width: 740px;
+  margin: 0 auto 20px;
+}
+
+.bienvenida-bajada strong {
+  color: #E0E1DD;
+  font-weight: 700;
+}
+
+.bienvenida-intro-destacado {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #E0E1DD;
+  padding: 16px 24px;
+  background: rgba(192, 57, 43, 0.12);
+  border-left: 3px solid #C0392B;
+  border-radius: 0 10px 10px 0;
+  display: inline-block;
+  text-align: left;
+  max-width: 680px;
+}
+
+/* --- Bloques de contenido --- */
+.bienvenida-bloque {
+  padding: 36px 32px;
+  background-color: rgba(27, 38, 59, 0.45);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.bienvenida-bloque::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 32px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent
+  );
+}
+
+.bienvenida-subtitulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #E0E1DD;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.01em;
+}
+
+.bienvenida-subtitulo-icono {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.bienvenida-bloque p {
+  font-size: 0.9rem;
+  color: rgba(224, 225, 221, 0.75);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.bienvenida-bloque p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Feature cards (Música, Teatro, Arte) --- */
+.bienvenida-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.bienvenida-feature {
+  background: linear-gradient(
+    145deg,
+    rgba(15, 30, 53, 0.7),
+    rgba(27, 38, 59, 0.5)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.bienvenida-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  border-color: rgba(192, 57, 43, 0.35);
+}
+
+.bienvenida-feature-icono {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.bienvenida-feature h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #E0E1DD;
+  margin-bottom: 8px;
+}
+
+.bienvenida-feature p {
+  font-size: 0.82rem !important;
+  color: rgba(224, 225, 221, 0.65) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* --- CTA final --- */
+.bienvenida-cta {
+  text-align: center;
+  padding: 40px 32px 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(27, 38, 59, 0.45) 0%,
+    rgba(15, 30, 53, 0.75) 100%
+  );
+  border-radius: 0 0 22px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+}
+
+.bienvenida-pregunta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #E0E1DD;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.bienvenida-btn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1B263B;
+  background: linear-gradient(135deg, #E0E1DD 0%, #c8c9c5 100%);
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 9999px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.bienvenida-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35),
+              0 0 20px rgba(224, 225, 221, 0.15);
+}
+
+/* --- Responsive bienvenida --- */
+@media (max-width: 768px) {
+  .bienvenida-hero {
+    padding: 40px 20px 32px;
+  }
+
+  .bienvenida-titulo {
+    font-size: 1.6rem;
+  }
+
+  .bienvenida-bloque {
+    padding: 28px 20px;
+  }
+
+  .bienvenida-features {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .bienvenida-pregunta {
+    font-size: 1.3rem;
+  }
+
+  .bienvenida-compass {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bienvenida-intro-destacado {
+    font-size: 0.95rem;
+    padding: 14px 18px;
+  }
+}
