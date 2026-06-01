@@ -1,0 +1,194 @@
+.filter-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 32px 0 20px;
+}
+
+.btn-filter {
+  background-color: rgba(224, 225, 221, 0.95);
+  border: 1px solid rgba(224, 225, 221, 0.95);
+  border-radius: 999px;
+  color: #415A77;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 10px 28px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-filter:hover {
+  transform: translateY(-2px);
+  background-color: #E0E1DD;
+  color: #415A77;
+}
+
+.btn-filter.active {
+  background-color: #E0E1DD;
+  color: #415A77;
+  border-color: #E0E1DD;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.mensaje-vacio {
+  color: rgba(224, 225, 221, 0.95);
+  font-size: 15px;
+  margin-top: 18px;
+}
+
+/* ==========================================================================
+   ESTILOS DE LOS CARTELES DINÁMICOS DE LA AGENDA
+   ========================================================================== */
+
+.eventos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
+  max-width: 850px;
+}
+
+/* El bloque contenedor principal (Gris/Azul oscuro) */
+.agenda-card {
+  display: flex;
+  align-items: center;
+  background-color: #24364F; /* Tono oscuro de fondo de cartel de tu captura */
+  border-radius: 12px;
+  padding: 6px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Bloque blanco/gris claro de la izquierda que contiene la fecha */
+.agenda-date-badge {
+  background-color: #EAEAEA;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.badge-day {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.badge-month {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+/* Contenedor central de los textos */
+.agenda-details {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.agenda-page-title {
+  color: #E0E1DD; /* Blanco suave igual que la tipografía de eventos */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.agenda-card .agenda-title {
+  color: #7A8B9E;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Especificaciones internas (Hora, Ubicación, Moneda) */
+.agenda-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: rgba(224, 225, 221, 0.6);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.agenda-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Botones y estado de tarjetas finalizadas */
+.agenda-card--finalizado {
+  background-color: #2A2F36;
+}
+
+.agenda-card--finalizado .agenda-date-badge {
+  background-color: #3B4149;
+  color: #E0E1DD;
+}
+
+.agenda-card--finalizado .agenda-title {
+  color: #E0E1DD;
+}
+
+.agenda-card--finalizado .agenda-meta {
+  color: rgba(224, 225, 221, 0.65);
+}
+
+.agenda-card--proximo {
+  background-color: #1a1a2e;
+}
+
+.agenda-card--proximo .agenda-date-badge {
+  background-color: #0D2B6E;
+  color: #E0E1DD;
+}
+
+.agenda-card--proximo .agenda-title {
+  color: #E0E1DD;
+}
+
+.agenda-card--proximo .agenda-meta {
+  color: rgba(224, 225, 221, 0.85);
+}
+
+/* Botón cruz para descartar eventos guardados */
+.btn-quitar-agenda {
+  background: none;
+  border: none;
+  color: rgba(224, 225, 221, 0.3);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px 18px;
+  transition: color 0.2s ease;
+}
+
+.btn-quitar-agenda:hover {
+  color: #E63946;
+}
+
+/* Regla utilitaria para ocultar/mostrar elementos alternados en JS */
+.oculto {
+  display: none !important;
+}
