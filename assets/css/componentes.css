@@ -999,3 +999,28 @@ body.modal-abierto {
     padding: 14px 18px;
   }
 }
+/* ── Estilos para eventos personalizados (publicados desde Contacto) ── */
+.badge-personalizado {
+    background-color: #2c7a4b;
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.modal-badge-comunidad {
+    font-size: 0.8rem;
+    color: #2c7a4b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.agenda-badge-comunidad {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #2c7a4b;
+    font-weight: 700;
+    margin-bottom: 4px;
+}

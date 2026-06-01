@@ -47,7 +47,12 @@
             </svg>
             <span class="nav-sitename">Indie Events Radar</span>
             <!-- Navegación principal del sitio -->
-            <nav>
+<button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+                        <nav>
                 <ul>
                     <li><a href="../../index.html">Inicio</a></li>
                     <li><a href="eventos.html">Eventos</a></li>
@@ -68,8 +73,9 @@
             </div>
 
             <div class="filter-buttons">
+                <button class="btn-filter active" data-filter="todos">Todos</button>
                 <button class="btn-filter" data-filter="finalizado">Finalizado</button>
-                <button class="btn-filter active" data-filter="hoy">Hoy</button>
+                <button class="btn-filter" data-filter="hoy">Hoy</button>
                 <button class="btn-filter" data-filter="proximo">Próximamente</button>
             </div>
 
@@ -158,8 +164,9 @@
 
     <!-- Carga de scripts: primero los datos, luego utilidades y por último la lógica de la agenda -->
     <script src="../data/data.js"></script>
-    <script src="../data/data.js"></script>
     <script src="../js/utils.js"></script>
+    <script src="../js/agenda.js"></script>
+    <script src="../js/nav.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,11 @@
-/* RESPONSIVE — Carrusel y media queries */
+/* ================================================
+   RESPONSIVE — Indie Events Radar (feature-developer)
+   ================================================ */
 
-/* ---------- Carrusel ---------- */
+/* -----------------------------------------------
+   CARRUSEL BASE — index.html (estilos de escritorio)
+   ----------------------------------------------- */
+
 .hero-carrusel {
     position: relative;
     width: 100%;
@@ -30,28 +35,12 @@
     background-position: center;
 }
 
-/* Colores de fondo fallback mientras carga la imagen */
-.carrusel-slide--1 {
-    background-color: #0D2B6E;
-}
+.carrusel-slide--1 { background-color: #0D2B6E; }
+.carrusel-slide--2 { background-color: #0A3A8A; }
+.carrusel-slide--3 { background-color: #0C4FA3; }
+.carrusel-slide--4 { background-color: #0B3D7A; }
+.carrusel-slide--5 { background-color: #082560; }
 
-.carrusel-slide--2 {
-    background-color: #0A3A8A;
-}
-
-.carrusel-slide--3 {
-    background-color: #0C4FA3;
-}
-
-.carrusel-slide--4 {
-    background-color: #0B3D7A;
-}
-
-.carrusel-slide--5 {
-    background-color: #082560;
-}
-
-/* Imagen de fondo del slide */
 .carrusel-img {
     position: absolute;
     inset: 0;
@@ -62,15 +51,14 @@
     z-index: 0;
 }
 
-/* Overlay degradado encima de la imagen */
 .carrusel-slide::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(to top,
-            rgba(0, 20, 80, 0.88) 0%,
-            rgba(0, 20, 80, 0.30) 55%,
-            rgba(0, 20, 80, 0.05) 100%);
+        rgba(0, 20, 80, 0.88) 0%,
+        rgba(0, 20, 80, 0.30) 55%,
+        rgba(0, 20, 80, 0.05) 100%);
     pointer-events: none;
 }
 
@@ -131,7 +119,6 @@
     border-color: #ffffff;
 }
 
-/* Botones prev / next */
 .carrusel-btn {
     position: absolute;
     top: 38%;
@@ -152,19 +139,10 @@
     line-height: 1;
 }
 
-.carrusel-btn:hover {
-    background-color: rgba(0, 20, 80, 0.85);
-}
+.carrusel-btn:hover { background-color: rgba(0, 20, 80, 0.85); }
+.carrusel-btn--prev { left: 16px; }
+.carrusel-btn--next { right: 16px; }
 
-.carrusel-btn--prev {
-    left: 16px;
-}
-
-.carrusel-btn--next {
-    right: 16px;
-}
-
-/* Dots */
 .carrusel-dots {
     position: absolute;
     bottom: 18px;
@@ -191,39 +169,760 @@
     transform: scale(1.35);
 }
 
-/* ---------- Media queries ---------- */
+/* -----------------------------------------------
+   HEADER / NAV — todas las páginas
+   ----------------------------------------------- */
+
+@media (max-width: 768px) {
+  body > header {
+    padding: 12px 20px;
+  }
+
+  body > header nav ul {
+    gap: 16px;
+  }
+
+  body > header nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  .nav-compass {
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+  }
+
+  .nav-sitename {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 560px) {
+  body > header {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+  }
+
+  .nav-wrapper {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Brújula + sitename en primera línea */
+  .nav-sitename {
+    flex: 1;
+    font-size: 0.82rem;
+  }
+
+  /* Nav links en segunda línea */
+  body > header nav {
+    width: 100%;
+    order: 3;
+  }
+
+  body > header nav ul {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  body > header nav ul li a {
+    font-size: 0.76rem;
+  }
+}
+
+
+/* -----------------------------------------------
+   MAIN — padding general
+   ----------------------------------------------- */
+
+@media (max-width: 768px) {
+  main {
+    padding: 24px 16px 48px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  main {
+    padding: 16px 12px 40px;
+    gap: 18px;
+  }
+}
+
+
+/* -----------------------------------------------
+   FOOTER — todas las páginas
+   ----------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    padding: 36px 24px 28px;
+  }
+
+  .footer-col--brand {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 700px) {
-    .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 36px 20px 24px;
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 20px 20px;
+  }
+
+  .footer-col--brand {
+    grid-column: auto;
+  }
+
+  .nav-sitename {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-bottom {
+    padding: 14px 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.72rem;
+  }
+}
+
+
+/* -----------------------------------------------
+   CARRUSEL — index.html
+   ----------------------------------------------- */
+
+@media (max-width: 768px) {
+  .hero-carrusel {
+    height: 300px;
+    border-radius: 12px;
+  }
+
+  .carrusel-contenido {
+    padding: 24px 24px;
+  }
+
+  .carrusel-contenido h2 {
+    font-size: 1.7rem;
+  }
+
+  .carrusel-contenido p {
+    font-size: 0.85rem;
+  }
+
+  .carrusel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    top: 40%;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-carrusel {
+    height: 240px;
+    border-radius: 10px;
+  }
+
+  .carrusel-contenido {
+    padding: 16px 18px;
+    gap: 6px;
+  }
+
+  .carrusel-contenido h2 {
+    font-size: 1.35rem;
+    line-height: 1.15;
+  }
+
+  .carrusel-contenido p {
+    font-size: 0.78rem;
+    display: none; /* oculta descripción en xs para no amontonar */
+  }
+
+  .carrusel-tag {
+    font-size: 0.65rem;
+  }
+
+  .carrusel-cta {
+    font-size: 0.72rem;
+    padding: 6px 16px;
+    margin-top: 4px;
+  }
+
+  .carrusel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+
+  .carrusel-dots {
+    bottom: 12px;
+    right: 14px;
+    gap: 6px;
+  }
+
+  .carrusel-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+
+/* -----------------------------------------------
+   BIENVENIDA — index.html
+   ----------------------------------------------- */
+
+@media (max-width: 768px) {
+  .bienvenida-hero {
+    padding: 36px 18px 28px;
+  }
+
+  .bienvenida-titulo {
+    font-size: 1.55rem;
+  }
+
+  .bienvenida-bajada {
+    font-size: 0.88rem;
+  }
+
+  .bienvenida-intro-destacado {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+  }
+
+  .bienvenida-bloque {
+    padding: 26px 18px;
+  }
+
+  .bienvenida-subtitulo {
+    font-size: 1.2rem;
+  }
+
+  .bienvenida-bloque p {
+    font-size: 0.875rem;
+  }
+
+  .bienvenida-features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .bienvenida-feature {
+    padding: 18px 16px;
+  }
+
+  .bienvenida-cta {
+    padding: 28px 18px 36px;
+  }
+
+  .bienvenida-pregunta {
+    font-size: 1.3rem;
+  }
+
+  .bienvenida-compass {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 560px) {
+  .bienvenida-titulo {
+    font-size: 1.3rem;
+  }
+
+  .bienvenida-subtitulo {
+    font-size: 1.05rem;
+    gap: 8px;
+  }
+
+  .bienvenida-subtitulo-icono {
+    font-size: 1.2rem;
+  }
+
+  .bienvenida-pregunta {
+    font-size: 1.1rem;
+  }
+
+  .bienvenida-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
+  }
+}
+
+
+/* -----------------------------------------------
+   COMUNIDAD — index.html
+   ----------------------------------------------- */
+
+@media (max-width: 560px) {
+  .presentacion-comunidad {
+    padding: 0;
+  }
+
+  .presentacion-comunidad h2 {
+    font-size: 1.2rem;
+  }
+
+  .comunidad-socials {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* -----------------------------------------------
+   EVENTOS — filtros (eventos.html)
+   ----------------------------------------------- */
+
+@media (max-width: 900px) {
+  .filtros-seccion {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px 18px;
+  }
+
+  .filtro-grupo {
+    flex: 1 1 calc(50% - 7px);
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 560px) {
+  .filtros-seccion {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .filtro-grupo {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .filtros-seccion label {
+    font-size: 0.68rem;
+  }
+
+  .filtros-seccion input,
+  .filtros-seccion select {
+    font-size: 0.85rem;
+    padding: 9px 12px;
+  }
+}
+
+
+/* -----------------------------------------------
+   EVENTOS — encabezado (eventos.html)
+   ----------------------------------------------- */
+
+@media (max-width: 768px) {
+  .encabezado-eventos {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .titulo-evento {
+    font-size: 1.6rem !important;
+  }
+
+  .p-evento {
+    font-size: 0.88rem;
+  }
+
+  .btn-random-anim {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .titulo-evento {
+    font-size: 1.35rem !important;
+  }
+}
+
+
+/* -----------------------------------------------
+   EVENTOS — grilla de cards (eventos.html)
+   ----------------------------------------------- */
+
+@media (max-width: 900px) {
+  #contenedor-cards-eventos {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: stretch;
+    gap: 18px;
+  }
+
+  .card-evento {
+    width: 100%;
+    height: auto;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 560px) {
+  #contenedor-cards-eventos {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card-evento {
+    min-height: 0;
+    height: auto;
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .card-titulo {
+    font-size: 1.1rem;
+  }
+
+  .card-descripcion {
+    font-size: 0.82rem;
+    -webkit-line-clamp: 4;
+  }
+
+  .card-spec-row span {
+    font-size: 0.75rem;
+  }
+
+  .card-precio {
+    font-size: 1rem;
+  }
+
+  .card-btn-agregar {
+    font-size: 0.75rem;
+    padding: 7px 16px;
+  }
+
+  .badge {
+    font-size: 0.62rem;
+    padding: 3px 9px;
+  }
+}
+
+
+/* -----------------------------------------------
+   EVENTOS — modal
+   ----------------------------------------------- */
+
+@media (max-width: 600px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal-contenido {
+    max-width: 100%;
+    border-radius: 18px 18px 0 0;
+    padding: 20px 18px 28px;
+    gap: 16px;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+    gap: 12px 0;
+  }
+
+  .modal-header h2 {
+    font-size: 1.05rem;
+  }
+
+  .modal-botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-btn-registrar,
+  .modal-btn-cerrar-pie {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .modal-descripcion {
+    font-size: 0.82rem;
+  }
+}
+
+
+/* -----------------------------------------------
+   AGENDA — cards (agenda.html)
+   ----------------------------------------------- */
+
+@media (max-width: 768px) {
+  .agenda-seccion {
+    width: 100%;
+  }
+
+  .agenda-page-title {
+    font-size: 1.6rem !important;
+  }
+
+  .eventos-container {
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .filter-buttons {
+    gap: 10px;
+    margin: 20px 0 14px;
+  }
+
+  .btn-filter {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .agenda-page-title {
+    font-size: 1.35rem !important;
+  }
+
+  .agenda-card {
+    padding: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .agenda-date-badge {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 10px;
+  }
+
+  .badge-day {
+    font-size: 20px;
+  }
+
+  .badge-month {
+    font-size: 10px;
+  }
+
+  .agenda-details {
+    padding: 8px 12px;
+    gap: 4px;
+  }
+
+  .agenda-card .agenda-title {
+    font-size: 14px;
+  }
+
+  .agenda-meta {
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .btn-quitar-agenda {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .filter-buttons {
+    gap: 8px;
+  }
+
+  .btn-filter {
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+}
+
+
+/* -----------------------------------------------
+   CONTACTO — formulario (contacto.html)
+   ----------------------------------------------- */
+
+@media (max-width: 768px) {
+  .contacto-seccion {
+    max-width: 100%;
+    gap: 24px;
+  }
+
+  .contacto-intro h1 {
+    font-size: 1.6rem;
+  }
+
+  .contacto-intro p {
+    font-size: 0.88rem;
+  }
+
+  .contacto-form-wrapper {
+    padding: 24px 18px;
+  }
+
+  .form-fila {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .contacto-intro h1 {
+    font-size: 1.35rem;
+  }
+
+  .contacto-form-wrapper {
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+
+  .form-grupo input,
+  .form-grupo select,
+  .form-grupo textarea {
+    font-size: 0.85rem;
+    padding: 9px 12px;
+  }
+
+  .form-grupo label {
+    font-size: 0.68rem;
+  }
+
+  .form-btn-enviar {
+    font-size: 0.85rem;
+    padding: 12px 24px;
+    margin-top: 18px;
+  }
+
+  .form-error {
+    font-size: 0.72rem;
+  }
+
+  .form-contador {
+    font-size: 0.68rem;
+  }
+}
+
+
+/* ===============================================
+   MENÚ HAMBURGUESA
+   =============================================== */
+
+/* Botón hamburguesa — oculto en desktop */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.nav-hamburger:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animación al abrir */
+.nav-hamburger.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger.is-open span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+.nav-hamburger.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 560px) {
+    /* Mostrar botón hamburguesa */
+    .nav-hamburger {
+        display: flex;
+    }
+
+    /* Ocultar nav por defecto en mobile */
+    body > header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1a1a2e;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding: 12px 0;
+        z-index: 100;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    /* Mostrar cuando está abierto */
+    body > header nav.nav-open {
+        display: block;
+    }
+
+    body > header nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    body > header nav ul li a {
+        display: block;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    body > header nav ul li a:hover,
+    body > header nav ul li a.active {
+        background: rgba(255,255,255,0.07);
+        border-left-color: #C0392B;
+        border-bottom-color: transparent;
+    }
+
+    /* Header en mobile: brújula + nombre + hamburguesa en una línea */
+    .nav-wrapper {
+        position: relative;
+        flex-wrap: nowrap;
+        gap: 0;
     }
 
     .nav-sitename {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero-carrusel {
-        height: 260px;
+        font-size: 0.85rem;
+        margin-right: 0;
+        flex: 1;
     }
 
-    .carrusel-contenido {
-        padding: 20px 22px;
+    .nav-compass {
+        width: 26px;
+        height: 26px;
+        margin-right: 8px;
     }
 
-    .carrusel-contenido h2 {
-        font-size: 1.5rem;
-    }
-
-    .carrusel-contenido p {
-        font-size: 0.8rem;
-    }
-
-    .carrusel-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 1.2rem;
+    body > header {
+        position: relative;
+        padding: 10px 16px;
     }
 }
